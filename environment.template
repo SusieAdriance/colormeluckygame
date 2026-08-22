@@ -1,0 +1,4 @@
+HOST_PASSWORD=replace-with-a-long-unique-host-password
+DATABASE_URL=mysql://user:password@host:3306/color_me_lucky
+PORT=3000
+ROOM_CODE=

@@ -1,0 +1,203 @@
+/**
+ * Studio Signal reserve-bank extension: a tactical question ledger with crisp navy,
+ * paper, and four signal-color cues. It preserves the broadcast production-rundown aesthetic.
+ */
+.reserve-section {
+  padding: 7rem 7vw;
+  background: #e6e0d1;
+}
+
+.reserve-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .53fr);
+  gap: clamp(2rem, 7vw, 8rem);
+  align-items: end;
+}
+
+.reserve-heading h2 {
+  max-width: 760px;
+  margin: 1.35rem 0 0;
+  color: var(--ink);
+  font-size: clamp(3.25rem, 5.65vw, 5.65rem);
+  line-height: .86;
+}
+
+.reserve-heading > p {
+  max-width: 365px;
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: .95rem;
+  line-height: 1.72;
+}
+
+.reserve-ledger {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  margin-top: 3.4rem;
+  border: 1px solid var(--ink);
+  background: #fffdf7;
+}
+
+.reserve-logic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.65rem;
+  border-right: 1px solid var(--ink);
+  background: var(--navy);
+  color: #fff;
+}
+
+.reserve-logic span,
+.reserve-stat span,
+.reserve-panel-title span,
+.reserve-card-meta,
+.reserve-answer-label,
+.reserve-note {
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: .075em;
+}
+
+.reserve-logic > span {
+  color: rgba(255,255,255,.56);
+  font-size: .58rem;
+  font-weight: 600;
+}
+
+.reserve-logic strong {
+  display: block;
+  margin: 1.5rem 0 1rem;
+  color: var(--signal-gold);
+  font: 400 3.3rem/.82 "Bebas Neue", sans-serif;
+  letter-spacing: .02em;
+}
+
+.reserve-logic p {
+  margin: 0;
+  color: rgba(255,255,255,.69);
+  font-size: .84rem;
+  line-height: 1.65;
+}
+
+.reserve-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--line);
+}
+
+.reserve-stat {
+  min-height: 112px;
+  padding: 1.2rem;
+  border-right: 1px solid var(--line);
+}
+
+.reserve-stat:last-child { border-right: 0; }
+
+.reserve-stat strong {
+  display: block;
+  margin-bottom: .5rem;
+  color: var(--ink);
+  font: 400 2.55rem/.83 "Bebas Neue", sans-serif;
+}
+
+.reserve-stat span {
+  color: #626b7a;
+  font-size: .56rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.reserve-tab-row {
+  display: flex;
+  gap: .42rem;
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid var(--line);
+  overflow-x: auto;
+}
+
+.reserve-tab-row button {
+  flex: 0 0 auto;
+  min-width: 76px;
+  padding: .58rem .7rem;
+  border: 1px solid rgba(17,23,43,.26);
+  background: transparent;
+  color: #5d6676;
+  font: 600 .57rem/1 "IBM Plex Mono", monospace;
+  letter-spacing: .055em;
+  transition: background 160ms var(--ease-out), border-color 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out);
+}
+
+.reserve-tab-row button:hover { border-color: var(--ink); color: var(--ink); }
+.reserve-tab-row button:active { transform: scale(.97); }
+.reserve-tab-row button[aria-pressed="true"] { border-color: var(--navy); background: var(--navy); color: #fff; }
+
+.reserve-panel { padding: 1.25rem; }
+
+.reserve-panel-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: .9rem;
+}
+
+.reserve-panel-title strong { font: 400 1.62rem/.9 "Bebas Neue", sans-serif; letter-spacing: .02em; }
+.reserve-panel-title span { color: #677080; font-size: .55rem; font-weight: 600; }
+
+.reserve-question-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+
+.reserve-question-card {
+  min-height: 216px;
+  padding: 1rem;
+  border: 1px solid rgba(17,23,43,.18);
+  background: #fff;
+}
+
+.reserve-card-meta { display: flex; align-items: center; gap: .5rem; color: #66707e; font-size: .52rem; font-weight: 600; }
+.reserve-card-meta > span:first-child { color: var(--signal-gold-deep); }
+.reserve-trap { padding: .2rem .27rem; background: var(--signal-yellow); color: var(--ink); font-size: .47rem; }
+.reserve-question-card h3 { min-height: 42px; margin: .72rem 0; color: var(--ink); font-size: .86rem; line-height: 1.4; }
+
+.reserve-options { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.reserve-options li { display: flex; min-width: 0; align-items: center; gap: .35rem; padding: .3rem .38rem; background: #f4f2ed; color: #576171; font-size: .64rem; line-height: 1.2; }
+.reserve-options li[data-correct="true"] { background: #ebf4db; color: var(--ink); font-weight: 700; }
+.answer-swatch { flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%; }
+.answer-red { background: var(--signal-red); }.answer-blue { background: var(--signal-blue); }.answer-green { background: var(--signal-green); }.answer-yellow { background: var(--signal-yellow); }
+
+.reserve-answer { display: flex; align-items: baseline; gap: .48rem; margin-top: .8rem; }
+.reserve-answer-label { color: #7b8490; font-size: .49rem; font-weight: 600; }.reserve-answer strong { color: var(--ink); font-size: .66rem; }
+
+.reserve-note {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 1rem 1.25rem 0;
+  color: #606979;
+  font-size: .56rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.reserve-note svg { flex: 0 0 auto; width: 14px; color: var(--signal-gold-deep); }
+
+@media (max-width: 1020px) {
+  .reserve-section { padding-right: 5vw; padding-left: 5vw; }
+  .reserve-ledger { grid-template-columns: 185px minmax(0, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .reserve-section { padding: 5.1rem 1.25rem; }
+  .reserve-heading { grid-template-columns: 1fr; gap: 1.2rem; }
+  .reserve-heading h2 { font-size: clamp(3rem, 15vw, 4.5rem); }
+  .reserve-ledger { grid-template-columns: 1fr; margin-top: 2.5rem; }
+  .reserve-logic { padding: 1.35rem; border-right: 0; border-bottom: 1px solid var(--ink); }
+  .reserve-logic strong { margin: .85rem 0 .7rem; font-size: 2.9rem; }
+  .reserve-stats { grid-template-columns: repeat(3, 1fr); }
+  .reserve-stat { min-height: 88px; padding: .85rem .65rem; }
+  .reserve-stat strong { font-size: 2rem; }
+  .reserve-stat span { font-size: .47rem; }
+  .reserve-panel { padding: .85rem; }
+  .reserve-question-grid { grid-template-columns: 1fr; }
+  .reserve-question-card { min-height: auto; }
+  .reserve-note { margin: .85rem; }
+}

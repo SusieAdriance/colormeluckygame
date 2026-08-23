@@ -1,0 +1,13 @@
+# Pin the Node major version. Vite 7 requires ^20.19 || >=22.12, and
+# vite.config.ts uses import.meta.dirname, which is undefined before Node 20.11.
+[phases.setup]
+nixPkgs = ["nodejs_22", "pnpm"]
+
+[phases.install]
+cmds = ["pnpm install --frozen-lockfile"]
+
+[phases.build]
+cmds = ["pnpm run build"]
+
+[start]
+cmd = "pnpm run start"

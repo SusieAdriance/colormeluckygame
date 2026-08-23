@@ -10,4 +10,4 @@ cmds = ["pnpm install --frozen-lockfile"]
 cmds = ["pnpm run build"]
 
 [start]
-cmd = "pnpm run start"
+cmd = "NODE_ENV=production node dist/index.js"

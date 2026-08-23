@@ -30,7 +30,11 @@ async function startServer() {
 
   const port = Number(process.env.PORT || "3000");
   server.listen(port, "0.0.0.0", () => {
-    console.log(`Server running on http://localhost:${port}/`);
+    console.log(
+      `[server] listening on 0.0.0.0:${port} ` +
+        `(NODE_ENV=${process.env.NODE_ENV ?? "unset"}, ` +
+        `PORT env=${process.env.PORT ?? "unset"})`
+    );
   });
 }
 

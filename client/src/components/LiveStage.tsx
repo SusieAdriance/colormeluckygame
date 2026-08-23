@@ -28,9 +28,9 @@ export function LiveStage() {
     camera.upperRadiusLimit = 8;
     camera.inputs.clear();
     const light = new HemisphericLight("light", new Vector3(0, 1, 0), scene);
-    light.intensity = 1.25;
+    light.intensity = 0.72;
     const glow = new GlowLayer("glow", scene);
-    glow.intensity = 0.72;
+    glow.intensity = 0.34;
     const root = new TransformNode("signal-wheel", scene);
     const colors = ["#e5463e", "#2d66b9", "#5ba75a", "#ffcf42"];
     colors.forEach((hex, index) => {
@@ -40,21 +40,21 @@ export function LiveStage() {
       orb.parent = root;
       const material = new StandardMaterial(`material-${index}`, scene);
       material.diffuseColor = Color3.FromHexString(hex);
-      material.emissiveColor = Color3.FromHexString(hex).scale(0.45);
-      material.specularColor = Color3.White().scale(0.8);
+      material.emissiveColor = Color3.FromHexString(hex).scale(0.26);
+      material.specularColor = Color3.White().scale(0.35);
       orb.material = material;
     });
     const core = MeshBuilder.CreatePolyhedron("core", { type: 1, size: 1.15 }, scene);
     core.parent = root;
     const coreMaterial = new StandardMaterial("core-material", scene);
     coreMaterial.diffuseColor = Color3.FromHexString("#f1c85b");
-    coreMaterial.emissiveColor = Color3.FromHexString("#b99021").scale(0.65);
+    coreMaterial.emissiveColor = Color3.FromHexString("#b99021").scale(0.38);
     core.material = coreMaterial;
     const ring = MeshBuilder.CreateTorus("ring", { diameter: 5.6, thickness: 0.06, tessellation: 64 }, scene);
     ring.parent = root;
     ring.rotation.x = Math.PI / 2.4;
     const ringMaterial = new StandardMaterial("ring-material", scene);
-    ringMaterial.emissiveColor = Color3.FromHexString("#f1c85b").scale(0.55);
+    ringMaterial.emissiveColor = Color3.FromHexString("#f1c85b").scale(0.3);
     ring.material = ringMaterial;
     scene.onBeforeRenderObservable.add(() => {
       root.rotation.z += 0.0021;

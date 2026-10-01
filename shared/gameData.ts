@@ -1,5 +1,5 @@
 /**
- * Generated from the approved Color Me Lucky Question Bank v2.
+ * Generated from the approved Color Me Lucky Question Bank v3.
  * Inventory: 3 demo, 65 primary, 30 reserve (six per player), and 5 tiebreakers.
  * Do not edit by hand; run scripts/build-game-data.mjs after source-content changes.
  */
@@ -23,40 +23,40 @@ export type GameQuestion = {
   colorTrap: boolean;
 };
 
-export const QUESTION_BANK_VERSION = "v2";
+export const QUESTION_BANK_VERSION = "v3";
 export const QUESTION_BANK_COUNTS = { demo: 3, primary: 65, reserve: 30, tiebreaker: 5, total: 103 } as const;
 
 export const DEMO_QUESTIONS: GameQuestion[] = [
   {
     "id": "D1",
-    "category": "Demo",
-    "prompt": "What color is grass?",
+    "category": "DISNEY CHARACTERS",
+    "prompt": "What is the name of Mickey Mouse's dog?",
     "options": [
       {
         "color": "red",
-        "label": "Blue"
+        "label": "Goofy"
       },
       {
         "color": "blue",
-        "label": "Red"
+        "label": "Pluto"
       },
       {
         "color": "green",
-        "label": "Green"
+        "label": "Donald"
       },
       {
         "color": "yellow",
-        "label": "Purple"
+        "label": "Figaro"
       }
     ],
-    "correctColor": "green",
-    "correctLabel": "Green",
+    "correctColor": "blue",
+    "correctLabel": "Pluto",
     "colorTrap": false
   },
   {
     "id": "D2",
-    "category": "Demo",
-    "prompt": "How many days are in a week?",
+    "category": "GENERAL KNOWLEDGE",
+    "prompt": "How many continents are there?",
     "options": [
       {
         "color": "red",
@@ -68,41 +68,41 @@ export const DEMO_QUESTIONS: GameQuestion[] = [
       },
       {
         "color": "green",
-        "label": "8"
+        "label": "7"
       },
       {
         "color": "yellow",
-        "label": "7"
+        "label": "8"
       }
     ],
-    "correctColor": "yellow",
+    "correctColor": "green",
     "correctLabel": "7",
     "colorTrap": false
   },
   {
     "id": "D3",
-    "category": "Demo",
-    "prompt": "What shape has three sides?",
+    "category": "BRAIN TEASER",
+    "prompt": "What goes up but never comes down?",
     "options": [
       {
         "color": "red",
-        "label": "Square"
+        "label": "A balloon"
       },
       {
         "color": "blue",
-        "label": "Circle"
+        "label": "Your age"
       },
       {
         "color": "green",
-        "label": "Triangle"
+        "label": "Smoke"
       },
       {
         "color": "yellow",
-        "label": "Hexagon"
+        "label": "A kite"
       }
     ],
-    "correctColor": "green",
-    "correctLabel": "Triangle",
+    "correctColor": "blue",
+    "correctLabel": "Your age",
     "colorTrap": false
   }
 ];
@@ -111,90 +111,324 @@ export const PRIMARY_QUESTIONS: Record<PlayerName, GameQuestion[]> = {
   "Stephanny": [
     {
       "id": "Q1",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "What is the largest ocean on Earth?",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "What is the name of the evil queen's enchanted object in \"Snow White\"?",
       "options": [
         {
           "color": "red",
-          "label": "Atlantic"
+          "label": "A crystal ball"
         },
         {
           "color": "blue",
-          "label": "Indian"
+          "label": "A magic mirror"
         },
         {
           "color": "green",
-          "label": "Arctic"
+          "label": "A spinning wheel"
         },
         {
           "color": "yellow",
-          "label": "Pacific"
+          "label": "A poisoned apple"
         }
       ],
-      "correctColor": "yellow",
-      "correctLabel": "Pacific",
+      "correctColor": "blue",
+      "correctLabel": "A magic mirror",
       "colorTrap": false
     },
     {
       "id": "Q2",
-      "category": "POP CULTURE",
-      "prompt": "Which streaming service produced \"Stranger Things\"?",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "What is the capital of Japan?",
       "options": [
         {
           "color": "red",
-          "label": "Hulu"
+          "label": "Seoul"
         },
         {
           "color": "blue",
-          "label": "Netflix"
+          "label": "Beijing"
         },
         {
           "color": "green",
-          "label": "Disney+"
+          "label": "Tokyo"
         },
         {
           "color": "yellow",
-          "label": "Peacock"
+          "label": "Bangkok"
         }
       ],
-      "correctColor": "blue",
-      "correctLabel": "Netflix",
+      "correctColor": "green",
+      "correctLabel": "Tokyo",
       "colorTrap": false
     },
     {
       "id": "Q3",
-      "category": "GEOGRAPHY",
-      "prompt": "What is the official language spoken in Puerto Rico alongside English?",
+      "category": "POP CULTURE",
+      "prompt": "Which band performed \"Bohemian Rhapsody\"?",
       "options": [
         {
           "color": "red",
-          "label": "French"
+          "label": "The Beatles"
         },
         {
           "color": "blue",
-          "label": "Portuguese"
+          "label": "Queen"
         },
         {
           "color": "green",
-          "label": "Spanish"
+          "label": "Led Zeppelin"
         },
         {
           "color": "yellow",
-          "label": "Italian"
+          "label": "Pink Floyd"
         }
       ],
-      "correctColor": "green",
-      "correctLabel": "Spanish",
+      "correctColor": "blue",
+      "correctLabel": "Queen",
       "colorTrap": false
     },
     {
       "id": "Q4",
-      "category": "BRAIN TEASER",
-      "prompt": "What has hands but cannot clap?",
+      "category": "GEOGRAPHY",
+      "prompt": "What is the longest mountain range in the world?",
       "options": [
         {
           "color": "red",
-          "label": "A glove"
+          "label": "Rockies"
+        },
+        {
+          "color": "blue",
+          "label": "Andes"
+        },
+        {
+          "color": "green",
+          "label": "Himalayas"
+        },
+        {
+          "color": "yellow",
+          "label": "Alps"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Andes",
+      "colorTrap": false
+    },
+    {
+      "id": "Q5",
+      "category": "BRAIN TEASER",
+      "prompt": "What question can you never honestly answer yes to?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Are you asleep?"
+        },
+        {
+          "color": "blue",
+          "label": "Are you lying?"
+        },
+        {
+          "color": "green",
+          "label": "Are you hungry?"
+        },
+        {
+          "color": "yellow",
+          "label": "Are you lost?"
+        }
+      ],
+      "correctColor": "red",
+      "correctLabel": "Are you asleep?",
+      "colorTrap": false
+    },
+    {
+      "id": "Q6",
+      "category": "FOOD & CUISINE",
+      "prompt": "**[COLOR TRAP]** What color is the inside pulp of a passion fruit?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Purple"
+        },
+        {
+          "color": "blue",
+          "label": "Yellow"
+        },
+        {
+          "color": "green",
+          "label": "Orange"
+        },
+        {
+          "color": "yellow",
+          "label": "Green"
+        }
+      ],
+      "correctColor": "green",
+      "correctLabel": "Orange",
+      "colorTrap": true
+    },
+    {
+      "id": "Q7",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "Who is Ariel's father in \"The Little Mermaid\"?",
+      "options": [
+        {
+          "color": "red",
+          "label": "King Triton"
+        },
+        {
+          "color": "blue",
+          "label": "King Neptune"
+        },
+        {
+          "color": "green",
+          "label": "King Poseidon"
+        },
+        {
+          "color": "yellow",
+          "label": "King Francis"
+        }
+      ],
+      "correctColor": "red",
+      "correctLabel": "King Triton",
+      "colorTrap": false
+    },
+    {
+      "id": "Q8",
+      "category": "CULTURE",
+      "prompt": "What is the name of the traditional Filipino bamboo dance where dancers hop between clapping poles?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Tinikling"
+        },
+        {
+          "color": "blue",
+          "label": "Itik-Itik"
+        },
+        {
+          "color": "green",
+          "label": "Pandanggo"
+        },
+        {
+          "color": "yellow",
+          "label": "Subli"
+        }
+      ],
+      "correctColor": "red",
+      "correctLabel": "Tinikling",
+      "colorTrap": false
+    },
+    {
+      "id": "Q9",
+      "category": "SCIENCE & NATURE",
+      "prompt": "What is the largest species of big cat?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Lion"
+        },
+        {
+          "color": "blue",
+          "label": "Tiger"
+        },
+        {
+          "color": "green",
+          "label": "Jaguar"
+        },
+        {
+          "color": "yellow",
+          "label": "Leopard"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Tiger",
+      "colorTrap": false
+    },
+    {
+      "id": "Q10",
+      "category": "TEAM PERSONALIZED",
+      "prompt": "Which team member works ops out of Puerto Rico alongside Giann and Stephanny?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Lyka"
+        },
+        {
+          "color": "blue",
+          "label": "Jenny"
+        },
+        {
+          "color": "green",
+          "label": "Francisco"
+        },
+        {
+          "color": "yellow",
+          "label": "Susie"
+        }
+      ],
+      "correctColor": "green",
+      "correctLabel": "Francisco",
+      "colorTrap": false
+    },
+    {
+      "id": "Q11",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "What is the smallest country in the world by land area?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Monaco"
+        },
+        {
+          "color": "blue",
+          "label": "San Marino"
+        },
+        {
+          "color": "green",
+          "label": "Vatican City"
+        },
+        {
+          "color": "yellow",
+          "label": "Liechtenstein"
+        }
+      ],
+      "correctColor": "green",
+      "correctLabel": "Vatican City",
+      "colorTrap": false
+    },
+    {
+      "id": "Q12",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "Who is the villain in \"Sleeping Beauty\"?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Ursula"
+        },
+        {
+          "color": "blue",
+          "label": "Maleficent"
+        },
+        {
+          "color": "green",
+          "label": "Cruella de Vil"
+        },
+        {
+          "color": "yellow",
+          "label": "Gaston"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Maleficent",
+      "colorTrap": false
+    },
+    {
+      "id": "Q13",
+      "category": "BRAIN TEASER",
+      "prompt": "What has a face and two hands but no arms or legs?",
+      "options": [
+        {
+          "color": "red",
+          "label": "A doll"
         },
         {
           "color": "blue",
@@ -202,7 +436,7 @@ export const PRIMARY_QUESTIONS: Record<PlayerName, GameQuestion[]> = {
         },
         {
           "color": "green",
-          "label": "A robot"
+          "label": "A mannequin"
         },
         {
           "color": "yellow",
@@ -212,307 +446,73 @@ export const PRIMARY_QUESTIONS: Record<PlayerName, GameQuestion[]> = {
       "correctColor": "blue",
       "correctLabel": "A clock",
       "colorTrap": false
-    },
-    {
-      "id": "Q5",
-      "category": "FOOD & CUISINE",
-      "prompt": "Mofongo, a popular Puerto Rican dish, is primarily made from what ingredient?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Rice"
-        },
-        {
-          "color": "blue",
-          "label": "Plantains"
-        },
-        {
-          "color": "green",
-          "label": "Potatoes"
-        },
-        {
-          "color": "yellow",
-          "label": "Yuca"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Plantains",
-      "colorTrap": false
-    },
-    {
-      "id": "Q6",
-      "category": "SCIENCE & NATURE",
-      "prompt": "**[COLOR TRAP]** What color is a lobster's blood?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Red"
-        },
-        {
-          "color": "blue",
-          "label": "Green"
-        },
-        {
-          "color": "green",
-          "label": "Blue"
-        },
-        {
-          "color": "yellow",
-          "label": "Clear"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Blue",
-      "colorTrap": true
-    },
-    {
-      "id": "Q7",
-      "category": "CULTURE",
-      "prompt": "What is the Filipino term for a whole roasted pig, often the centerpiece of a fiesta feast?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Adobo"
-        },
-        {
-          "color": "blue",
-          "label": "Lechon"
-        },
-        {
-          "color": "green",
-          "label": "Sinigang"
-        },
-        {
-          "color": "yellow",
-          "label": "Halo-halo"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Lechon",
-      "colorTrap": false
-    },
-    {
-      "id": "Q8",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "How many bones are in the adult human body?",
-      "options": [
-        {
-          "color": "red",
-          "label": "186"
-        },
-        {
-          "color": "blue",
-          "label": "206"
-        },
-        {
-          "color": "green",
-          "label": "226"
-        },
-        {
-          "color": "yellow",
-          "label": "246"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "206",
-      "colorTrap": false
-    },
-    {
-      "id": "Q9",
-      "category": "TEAM PERSONALIZED",
-      "prompt": "Which two team members are based in the Philippines?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Giann & Stephanny"
-        },
-        {
-          "color": "blue",
-          "label": "Lyka & Jenny"
-        },
-        {
-          "color": "green",
-          "label": "Francisco & Giann"
-        },
-        {
-          "color": "yellow",
-          "label": "Stephanny & Francisco"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Lyka & Jenny",
-      "colorTrap": false
-    },
-    {
-      "id": "Q10",
-      "category": "BRAIN TEASER",
-      "prompt": "The more you take, the more you leave behind. What am I?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Money"
-        },
-        {
-          "color": "blue",
-          "label": "Time"
-        },
-        {
-          "color": "green",
-          "label": "Footsteps"
-        },
-        {
-          "color": "yellow",
-          "label": "Memories"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Footsteps",
-      "colorTrap": false
-    },
-    {
-      "id": "Q11",
-      "category": "POP CULTURE",
-      "prompt": "What is the name of the coffee shop in the sitcom \"Friends\"?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Central Perk"
-        },
-        {
-          "color": "blue",
-          "label": "The Grind"
-        },
-        {
-          "color": "green",
-          "label": "Java Joe's"
-        },
-        {
-          "color": "yellow",
-          "label": "Perk Place"
-        }
-      ],
-      "correctColor": "red",
-      "correctLabel": "Central Perk",
-      "colorTrap": false
-    },
-    {
-      "id": "Q12",
-      "category": "GEOGRAPHY",
-      "prompt": "Which U.S. state is nicknamed the \"Sunshine State\"?",
-      "options": [
-        {
-          "color": "red",
-          "label": "California"
-        },
-        {
-          "color": "blue",
-          "label": "Florida"
-        },
-        {
-          "color": "green",
-          "label": "Arizona"
-        },
-        {
-          "color": "yellow",
-          "label": "Hawaii"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Florida",
-      "colorTrap": false
-    },
-    {
-      "id": "Q13",
-      "category": "SCIENCE & NATURE",
-      "prompt": "What is the only mammal capable of true, sustained flight?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Flying squirrel"
-        },
-        {
-          "color": "blue",
-          "label": "Bat"
-        },
-        {
-          "color": "green",
-          "label": "Colugo"
-        },
-        {
-          "color": "yellow",
-          "label": "Sugar glider"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Bat",
-      "colorTrap": false
     }
   ],
   "Giann": [
     {
       "id": "Q14",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "What is the hardest natural substance on Earth?",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "In \"Beauty and the Beast,\" what household object is Lumiere?",
       "options": [
         {
           "color": "red",
-          "label": "Gold"
+          "label": "A clock"
         },
         {
           "color": "blue",
-          "label": "Quartz"
+          "label": "A candelabra"
         },
         {
           "color": "green",
-          "label": "Diamond"
+          "label": "A teapot"
         },
         {
           "color": "yellow",
-          "label": "Titanium"
+          "label": "A wardrobe"
         }
       ],
-      "correctColor": "green",
-      "correctLabel": "Diamond",
+      "correctColor": "blue",
+      "correctLabel": "A candelabra",
       "colorTrap": false
     },
     {
       "id": "Q15",
       "category": "POP CULTURE",
-      "prompt": "Which artist released the album \"Fine Line\"?",
+      "prompt": "What is the best selling video game console of all time?",
       "options": [
         {
           "color": "red",
-          "label": "Shawn Mendes"
+          "label": "PlayStation 2"
         },
         {
           "color": "blue",
-          "label": "Harry Styles"
+          "label": "Nintendo Switch"
         },
         {
           "color": "green",
-          "label": "Niall Horan"
+          "label": "Xbox 360"
         },
         {
           "color": "yellow",
-          "label": "Louis Tomlinson"
+          "label": "Wii"
         }
       ],
-      "correctColor": "blue",
-      "correctLabel": "Harry Styles",
+      "correctColor": "red",
+      "correctLabel": "PlayStation 2",
       "colorTrap": false
     },
     {
       "id": "Q16",
       "category": "GEOGRAPHY",
-      "prompt": "**[COLOR TRAP]** What color are the stars on the Philippine flag?",
+      "prompt": "**[COLOR TRAP]** What color are most of the feathers on Florida's state bird, the mockingbird?",
       "options": [
         {
           "color": "red",
-          "label": "Red"
+          "label": "Blue"
         },
         {
           "color": "blue",
-          "label": "Gold"
+          "label": "Brown"
         },
         {
           "color": "green",
@@ -520,1015 +520,255 @@ export const PRIMARY_QUESTIONS: Record<PlayerName, GameQuestion[]> = {
         },
         {
           "color": "yellow",
-          "label": "Blue"
+          "label": "Gray"
         }
       ],
-      "correctColor": "green",
-      "correctLabel": "White",
+      "correctColor": "yellow",
+      "correctLabel": "Gray",
       "colorTrap": true
     },
     {
       "id": "Q17",
       "category": "FOOD & CUISINE",
-      "prompt": "Adobo, one of the most iconic Filipino dishes, is traditionally cooked with soy sauce, garlic, and what other key ingredient?",
+      "prompt": "Pastelillos, a popular Puerto Rican snack, are best described as what?",
       "options": [
         {
           "color": "red",
-          "label": "Coconut milk"
+          "label": "Fried empanada style turnovers"
         },
         {
           "color": "blue",
-          "label": "Vinegar"
+          "label": "Sweet rice pudding"
         },
         {
           "color": "green",
-          "label": "Fish sauce"
+          "label": "Grilled corn cakes"
         },
         {
           "color": "yellow",
-          "label": "Tamarind"
+          "label": "Stuffed plantain balls"
         }
       ],
-      "correctColor": "blue",
-      "correctLabel": "Vinegar",
+      "correctColor": "red",
+      "correctLabel": "Fried empanada style turnovers",
       "colorTrap": false
     },
     {
       "id": "Q18",
       "category": "BRAIN TEASER",
-      "prompt": "What can travel around the world while staying in a corner?",
+      "prompt": "What invention lets you look right through a wall?",
       "options": [
         {
           "color": "red",
-          "label": "A shadow"
+          "label": "A telescope"
         },
         {
           "color": "blue",
-          "label": "A stamp"
+          "label": "A window"
         },
         {
           "color": "green",
-          "label": "The wind"
+          "label": "A mirror"
         },
         {
           "color": "yellow",
-          "label": "A letter"
+          "label": "A periscope"
         }
       ],
       "correctColor": "blue",
-      "correctLabel": "A stamp",
+      "correctLabel": "A window",
       "colorTrap": false
     },
     {
       "id": "Q19",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "Which planet has the most moons confirmed as of recent counts?",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "Who is the main villain in \"The Lion King\"?",
       "options": [
         {
           "color": "red",
-          "label": "Jupiter"
+          "label": "Zira"
         },
         {
           "color": "blue",
-          "label": "Saturn"
+          "label": "Shenzi"
         },
         {
           "color": "green",
-          "label": "Neptune"
+          "label": "Scar"
         },
         {
           "color": "yellow",
-          "label": "Uranus"
+          "label": "Banzai"
         }
       ],
-      "correctColor": "blue",
-      "correctLabel": "Saturn",
+      "correctColor": "green",
+      "correctLabel": "Scar",
       "colorTrap": false
     },
     {
       "id": "Q20",
-      "category": "CULTURE",
-      "prompt": "What is the name of the annual Puerto Rican festival held in mid-January honoring the patron saint of San Juan?",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "Which element has the chemical symbol \"Fe\"?",
       "options": [
         {
           "color": "red",
-          "label": "Fiestas de la Calle San Sebastián"
+          "label": "Fluorine"
         },
         {
           "color": "blue",
-          "label": "Carnaval de Ponce"
+          "label": "Iron"
         },
         {
           "color": "green",
-          "label": "Día de Reyes"
+          "label": "Francium"
         },
         {
           "color": "yellow",
-          "label": "Las Fiestas Patronales"
+          "label": "Lead"
         }
       ],
-      "correctColor": "red",
-      "correctLabel": "Fiestas de la Calle San Sebastián",
+      "correctColor": "blue",
+      "correctLabel": "Iron",
       "colorTrap": false
     },
     {
       "id": "Q21",
-      "category": "SCIENCE & NATURE",
-      "prompt": "How many hearts does an octopus have?",
+      "category": "CULTURE",
+      "prompt": "What is the Puerto Rican term for a roadside food stand, often selling fritters and fresh juice?",
       "options": [
         {
           "color": "red",
-          "label": "1"
+          "label": "Chinchorro"
         },
         {
           "color": "blue",
-          "label": "2"
+          "label": "Kiosko"
         },
         {
           "color": "green",
-          "label": "3"
+          "label": "Fonda"
         },
         {
           "color": "yellow",
-          "label": "4"
+          "label": "Bodega"
         }
       ],
-      "correctColor": "green",
-      "correctLabel": "3",
+      "correctColor": "blue",
+      "correctLabel": "Kiosko",
       "colorTrap": false
     },
     {
       "id": "Q22",
-      "category": "TEAM PERSONALIZED",
-      "prompt": "True or false vibe question: on a company Jeopardy-style trivia night, which team got every single accounting question wrong?",
+      "category": "SCIENCE & NATURE",
+      "prompt": "What is the term for a baby kangaroo?",
       "options": [
         {
           "color": "red",
-          "label": "Ops team"
+          "label": "Cub"
         },
         {
           "color": "blue",
-          "label": "Sales team"
+          "label": "Joey"
         },
         {
           "color": "green",
-          "label": "The accounting team"
+          "label": "Kid"
         },
         {
           "color": "yellow",
-          "label": "Nobody, they swept it"
+          "label": "Pup"
         }
       ],
-      "correctColor": "green",
-      "correctLabel": "The accounting team",
+      "correctColor": "blue",
+      "correctLabel": "Joey",
       "colorTrap": false
     },
     {
       "id": "Q23",
-      "category": "POP CULTURE",
-      "prompt": "What was the highest-grossing film of all time before \"Avatar\" took the title?",
+      "category": "TEAM PERSONALIZED",
+      "prompt": "What nickname does Susie use for her sons, borrowed from Winnie the Pooh?",
       "options": [
         {
           "color": "red",
-          "label": "Titanic"
+          "label": "Piglet"
         },
         {
           "color": "blue",
-          "label": "Jurassic Park"
+          "label": "Tigger"
         },
         {
           "color": "green",
-          "label": "Star Wars"
+          "label": "Roo"
         },
         {
           "color": "yellow",
-          "label": "E.T."
+          "label": "Eeyore"
         }
       ],
-      "correctColor": "red",
-      "correctLabel": "Titanic",
+      "correctColor": "green",
+      "correctLabel": "Roo",
       "colorTrap": false
     },
     {
       "id": "Q24",
-      "category": "GEOGRAPHY",
-      "prompt": "What ocean borders Florida's Atlantic coastline?",
+      "category": "POP CULTURE",
+      "prompt": "What was the first Pixar film ever released?",
       "options": [
         {
           "color": "red",
-          "label": "Pacific"
+          "label": "A Bug's Life"
         },
         {
           "color": "blue",
-          "label": "Atlantic"
+          "label": "Toy Story"
         },
         {
           "color": "green",
-          "label": "Indian"
+          "label": "Monsters, Inc."
         },
         {
           "color": "yellow",
-          "label": "Arctic"
+          "label": "Finding Nemo"
         }
       ],
       "correctColor": "blue",
-      "correctLabel": "Atlantic",
+      "correctLabel": "Toy Story",
       "colorTrap": false
     },
     {
       "id": "Q25",
-      "category": "BRAIN TEASER",
-      "prompt": "What gets bigger the more you remove from it?",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "What is the name of Aladdin's pet monkey?",
       "options": [
         {
           "color": "red",
-          "label": "A balloon"
+          "label": "Rajah"
         },
         {
           "color": "blue",
-          "label": "A hole"
+          "label": "Iago"
         },
         {
           "color": "green",
-          "label": "A shadow"
+          "label": "Abu"
         },
         {
           "color": "yellow",
-          "label": "A debt"
+          "label": "Zazu"
         }
       ],
-      "correctColor": "blue",
-      "correctLabel": "A hole",
+      "correctColor": "green",
+      "correctLabel": "Abu",
       "colorTrap": false
     },
     {
       "id": "Q26",
-      "category": "FOOD & CUISINE",
-      "prompt": "**[COLOR TRAP]** Halo-halo, a beloved Filipino dessert, is famous for its colorful layers, but what color is the ube (purple yam) ice cream typically scooped on top?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Pink"
-        },
-        {
-          "color": "blue",
-          "label": "Green"
-        },
-        {
-          "color": "green",
-          "label": "Purple"
-        },
-        {
-          "color": "yellow",
-          "label": "Orange"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Purple",
-      "colorTrap": true
-    }
-  ],
-  "Francisco": [
-    {
-      "id": "Q27",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "What is the currency used in Puerto Rico?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Peso"
-        },
-        {
-          "color": "blue",
-          "label": "US Dollar"
-        },
-        {
-          "color": "green",
-          "label": "Euro"
-        },
-        {
-          "color": "yellow",
-          "label": "Puerto Rican Real"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "US Dollar",
-      "colorTrap": false
-    },
-    {
-      "id": "Q28",
-      "category": "POP CULTURE",
-      "prompt": "In \"The Office,\" what company does Dunder Mifflin sell?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Office furniture"
-        },
-        {
-          "color": "blue",
-          "label": "Paper"
-        },
-        {
-          "color": "green",
-          "label": "Computers"
-        },
-        {
-          "color": "yellow",
-          "label": "Insurance"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Paper",
-      "colorTrap": false
-    },
-    {
-      "id": "Q29",
       "category": "GEOGRAPHY",
-      "prompt": "What is the smallest U.S. state by land area?",
+      "prompt": "What island group does the Philippine capital, Manila, belong to?",
       "options": [
         {
           "color": "red",
-          "label": "Delaware"
-        },
-        {
-          "color": "blue",
-          "label": "Connecticut"
-        },
-        {
-          "color": "green",
-          "label": "Rhode Island"
-        },
-        {
-          "color": "yellow",
-          "label": "Vermont"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Rhode Island",
-      "colorTrap": false
-    },
-    {
-      "id": "Q30",
-      "category": "BRAIN TEASER",
-      "prompt": "What word becomes shorter when you add two letters to it?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Long"
-        },
-        {
-          "color": "blue",
-          "label": "Short"
-        },
-        {
-          "color": "green",
-          "label": "Big"
-        },
-        {
-          "color": "yellow",
-          "label": "Small"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Short",
-      "colorTrap": false
-    },
-    {
-      "id": "Q31",
-      "category": "FOOD & CUISINE",
-      "prompt": "What Florida citrus fruit is the official state fruit?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Lemon"
-        },
-        {
-          "color": "blue",
-          "label": "Orange"
-        },
-        {
-          "color": "green",
-          "label": "Grapefruit"
-        },
-        {
-          "color": "yellow",
-          "label": "Tangerine"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Orange",
-      "colorTrap": false
-    },
-    {
-      "id": "Q32",
-      "category": "SCIENCE & NATURE",
-      "prompt": "**[COLOR TRAP]** What color is a polar bear's skin underneath its fur?",
-      "options": [
-        {
-          "color": "red",
-          "label": "White"
-        },
-        {
-          "color": "blue",
-          "label": "Pink"
-        },
-        {
-          "color": "green",
-          "label": "Gray"
-        },
-        {
-          "color": "yellow",
-          "label": "Black"
-        }
-      ],
-      "correctColor": "yellow",
-      "correctLabel": "Black",
-      "colorTrap": true
-    },
-    {
-      "id": "Q33",
-      "category": "CULTURE",
-      "prompt": "Sinigang, a Filipino comfort food staple, is best described as what type of dish?",
-      "options": [
-        {
-          "color": "red",
-          "label": "A sour tamarind-based soup"
-        },
-        {
-          "color": "blue",
-          "label": "A sweet rice cake"
-        },
-        {
-          "color": "green",
-          "label": "A grilled skewer"
-        },
-        {
-          "color": "yellow",
-          "label": "A stir-fried noodle dish"
-        }
-      ],
-      "correctColor": "red",
-      "correctLabel": "A sour tamarind-based soup",
-      "colorTrap": false
-    },
-    {
-      "id": "Q34",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "Which U.S. president appears on the $100 bill?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Abraham Lincoln"
-        },
-        {
-          "color": "blue",
-          "label": "Alexander Hamilton"
-        },
-        {
-          "color": "green",
-          "label": "Benjamin Franklin"
-        },
-        {
-          "color": "yellow",
-          "label": "George Washington"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Benjamin Franklin",
-      "colorTrap": false
-    },
-    {
-      "id": "Q35",
-      "category": "TEAM PERSONALIZED",
-      "prompt": "What time zone is Puerto Rico in, home to three of this team's five players?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Eastern"
-        },
-        {
-          "color": "blue",
-          "label": "Atlantic"
-        },
-        {
-          "color": "green",
-          "label": "Central"
-        },
-        {
-          "color": "yellow",
-          "label": "Pacific"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Atlantic",
-      "colorTrap": false
-    },
-    {
-      "id": "Q36",
-      "category": "BRAIN TEASER",
-      "prompt": "What kind of room has no doors or windows?",
-      "options": [
-        {
-          "color": "red",
-          "label": "A closet"
-        },
-        {
-          "color": "blue",
-          "label": "A mushroom"
-        },
-        {
-          "color": "green",
-          "label": "A tent"
-        },
-        {
-          "color": "yellow",
-          "label": "A cave"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "A mushroom",
-      "colorTrap": false
-    },
-    {
-      "id": "Q37",
-      "category": "POP CULTURE",
-      "prompt": "What is the fictional African country in \"Black Panther\"?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Zamunda"
-        },
-        {
-          "color": "blue",
-          "label": "Wakanda"
-        },
-        {
-          "color": "green",
-          "label": "Genovia"
-        },
-        {
-          "color": "yellow",
-          "label": "Latveria"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Wakanda",
-      "colorTrap": false
-    },
-    {
-      "id": "Q38",
-      "category": "GEOGRAPHY",
-      "prompt": "What body of water separates Florida from the Bahamas?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Gulf of Mexico"
-        },
-        {
-          "color": "blue",
-          "label": "Straits of Florida"
-        },
-        {
-          "color": "green",
-          "label": "Caribbean Sea"
-        },
-        {
-          "color": "yellow",
-          "label": "Atlantic Trench"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Straits of Florida",
-      "colorTrap": false
-    },
-    {
-      "id": "Q39",
-      "category": "SCIENCE & NATURE",
-      "prompt": "How many chambers does a human heart have?",
-      "options": [
-        {
-          "color": "red",
-          "label": "2"
-        },
-        {
-          "color": "blue",
-          "label": "3"
-        },
-        {
-          "color": "green",
-          "label": "4"
-        },
-        {
-          "color": "yellow",
-          "label": "5"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "4",
-      "colorTrap": false
-    }
-  ],
-  "Lyka": [
-    {
-      "id": "Q40",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "What is the longest river in the world?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Amazon"
-        },
-        {
-          "color": "blue",
-          "label": "Nile"
-        },
-        {
-          "color": "green",
-          "label": "Yangtze"
-        },
-        {
-          "color": "yellow",
-          "label": "Mississippi"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Nile",
-      "colorTrap": false
-    },
-    {
-      "id": "Q41",
-      "category": "POP CULTURE",
-      "prompt": "What is the name of the wizarding school in Harry Potter?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Beauxbatons"
-        },
-        {
-          "color": "blue",
-          "label": "Durmstrang"
-        },
-        {
-          "color": "green",
-          "label": "Hogwarts"
-        },
-        {
-          "color": "yellow",
-          "label": "Ilvermorny"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Hogwarts",
-      "colorTrap": false
-    },
-    {
-      "id": "Q42",
-      "category": "GEOGRAPHY",
-      "prompt": "**[COLOR TRAP]** What color is the \"black box\" flight recorder on airplanes?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Black"
-        },
-        {
-          "color": "blue",
-          "label": "Gray"
-        },
-        {
-          "color": "green",
-          "label": "Orange"
-        },
-        {
-          "color": "yellow",
-          "label": "Silver"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Orange",
-      "colorTrap": true
-    },
-    {
-      "id": "Q43",
-      "category": "FOOD & CUISINE",
-      "prompt": "What tropical fruit is the key ingredient in a traditional Puerto Rican tembleque?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Mango"
-        },
-        {
-          "color": "blue",
-          "label": "Coconut"
-        },
-        {
-          "color": "green",
-          "label": "Papaya"
-        },
-        {
-          "color": "yellow",
-          "label": "Guava"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Coconut",
-      "colorTrap": false
-    },
-    {
-      "id": "Q44",
-      "category": "BRAIN TEASER",
-      "prompt": "What has one eye but cannot see?",
-      "options": [
-        {
-          "color": "red",
-          "label": "A cyclops"
-        },
-        {
-          "color": "blue",
-          "label": "A needle"
-        },
-        {
-          "color": "green",
-          "label": "A storm"
-        },
-        {
-          "color": "yellow",
-          "label": "A camera"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "A needle",
-      "colorTrap": false
-    },
-    {
-      "id": "Q45",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "What is the smallest planet in our solar system?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Mars"
-        },
-        {
-          "color": "blue",
-          "label": "Mercury"
-        },
-        {
-          "color": "green",
-          "label": "Venus"
-        },
-        {
-          "color": "yellow",
-          "label": "Pluto"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Mercury",
-      "colorTrap": false
-    },
-    {
-      "id": "Q46",
-      "category": "CULTURE",
-      "prompt": "What is the name of the traditional Puerto Rican folk music and dance style associated with African heritage and drumming?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Salsa"
-        },
-        {
-          "color": "blue",
-          "label": "Bomba"
-        },
-        {
-          "color": "green",
-          "label": "Reggaeton"
-        },
-        {
-          "color": "yellow",
-          "label": "Plena"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Bomba",
-      "colorTrap": false
-    },
-    {
-      "id": "Q47",
-      "category": "SCIENCE & NATURE",
-      "prompt": "Which sense is most closely linked to memory and emotion in the human brain?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Sight"
-        },
-        {
-          "color": "blue",
-          "label": "Hearing"
-        },
-        {
-          "color": "green",
-          "label": "Smell"
-        },
-        {
-          "color": "yellow",
-          "label": "Touch"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Smell",
-      "colorTrap": false
-    },
-    {
-      "id": "Q48",
-      "category": "TEAM PERSONALIZED",
-      "prompt": "Which team member is Susie's direct report on Secure Net Capital operations, based in Puerto Rico?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Giann"
-        },
-        {
-          "color": "blue",
-          "label": "Francisco"
-        },
-        {
-          "color": "green",
-          "label": "Stephanny"
-        },
-        {
-          "color": "yellow",
-          "label": "Lyka"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Francisco",
-      "colorTrap": false
-    },
-    {
-      "id": "Q49",
-      "category": "POP CULTURE",
-      "prompt": "What is the highest-grossing animated film of all time (as of recent box office records)?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Frozen II"
-        },
-        {
-          "color": "blue",
-          "label": "Inside Out 2"
-        },
-        {
-          "color": "green",
-          "label": "The Lion King (2019)"
-        },
-        {
-          "color": "yellow",
-          "label": "Minions: The Rise of Gru"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Inside Out 2",
-      "colorTrap": false
-    },
-    {
-      "id": "Q50",
-      "category": "GEOGRAPHY",
-      "prompt": "What is the capital city of the Philippines?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Cebu City"
-        },
-        {
-          "color": "blue",
-          "label": "Davao City"
-        },
-        {
-          "color": "green",
-          "label": "Manila"
-        },
-        {
-          "color": "yellow",
-          "label": "Quezon City"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Manila",
-      "colorTrap": false
-    },
-    {
-      "id": "Q51",
-      "category": "BRAIN TEASER",
-      "prompt": "What building has the most stories, yet no floors?",
-      "options": [
-        {
-          "color": "red",
-          "label": "A school"
-        },
-        {
-          "color": "blue",
-          "label": "A library"
-        },
-        {
-          "color": "green",
-          "label": "A hospital"
-        },
-        {
-          "color": "yellow",
-          "label": "A skyscraper"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "A library",
-      "colorTrap": false
-    },
-    {
-      "id": "Q52",
-      "category": "SCIENCE & NATURE",
-      "prompt": "What gas makes up the majority of Earth's atmosphere?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Oxygen"
-        },
-        {
-          "color": "blue",
-          "label": "Carbon Dioxide"
-        },
-        {
-          "color": "green",
-          "label": "Hydrogen"
-        },
-        {
-          "color": "yellow",
-          "label": "Nitrogen"
-        }
-      ],
-      "correctColor": "yellow",
-      "correctLabel": "Nitrogen",
-      "colorTrap": false
-    }
-  ],
-  "Jenny": [
-    {
-      "id": "Q53",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "What year did Puerto Rico become a U.S. territory?",
-      "options": [
-        {
-          "color": "red",
-          "label": "1898"
-        },
-        {
-          "color": "blue",
-          "label": "1917"
-        },
-        {
-          "color": "green",
-          "label": "1952"
-        },
-        {
-          "color": "yellow",
-          "label": "1959"
-        }
-      ],
-      "correctColor": "red",
-      "correctLabel": "1898",
-      "colorTrap": false
-    },
-    {
-      "id": "Q54",
-      "category": "POP CULTURE",
-      "prompt": "Which superhero is known as the \"Man of Steel\"?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Batman"
-        },
-        {
-          "color": "blue",
-          "label": "Superman"
-        },
-        {
-          "color": "green",
-          "label": "The Flash"
-        },
-        {
-          "color": "yellow",
-          "label": "Green Lantern"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Superman",
-      "colorTrap": false
-    },
-    {
-      "id": "Q55",
-      "category": "GEOGRAPHY",
-      "prompt": "What is the largest island in the Philippines?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Cebu"
+          "label": "Visayas"
         },
         {
           "color": "blue",
@@ -1546,11 +786,771 @@ export const PRIMARY_QUESTIONS: Record<PlayerName, GameQuestion[]> = {
       "correctColor": "green",
       "correctLabel": "Luzon",
       "colorTrap": false
+    }
+  ],
+  "Francisco": [
+    {
+      "id": "Q27",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "In \"Cinderella,\" what time does the magic spell break?",
+      "options": [
+        {
+          "color": "red",
+          "label": "10 PM"
+        },
+        {
+          "color": "blue",
+          "label": "Midnight"
+        },
+        {
+          "color": "green",
+          "label": "11 PM"
+        },
+        {
+          "color": "yellow",
+          "label": "Dawn"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Midnight",
+      "colorTrap": false
+    },
+    {
+      "id": "Q28",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "Who painted the Mona Lisa?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Michelangelo"
+        },
+        {
+          "color": "blue",
+          "label": "Leonardo da Vinci"
+        },
+        {
+          "color": "green",
+          "label": "Raphael"
+        },
+        {
+          "color": "yellow",
+          "label": "Donatello"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Leonardo da Vinci",
+      "colorTrap": false
+    },
+    {
+      "id": "Q29",
+      "category": "BRAIN TEASER",
+      "prompt": "What has many keys but can't open a single lock?",
+      "options": [
+        {
+          "color": "red",
+          "label": "A keychain"
+        },
+        {
+          "color": "blue",
+          "label": "A piano"
+        },
+        {
+          "color": "green",
+          "label": "A map"
+        },
+        {
+          "color": "yellow",
+          "label": "A safe"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "A piano",
+      "colorTrap": false
+    },
+    {
+      "id": "Q30",
+      "category": "FOOD & CUISINE",
+      "prompt": "**[COLOR TRAP]** What color is traditional Puerto Rican sofrito, the base used in many dishes?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Red"
+        },
+        {
+          "color": "blue",
+          "label": "Orange"
+        },
+        {
+          "color": "green",
+          "label": "Yellow"
+        },
+        {
+          "color": "yellow",
+          "label": "Green"
+        }
+      ],
+      "correctColor": "yellow",
+      "correctLabel": "Green",
+      "colorTrap": true
+    },
+    {
+      "id": "Q31",
+      "category": "CULTURE",
+      "prompt": "What is the name for a traditional Filipino nipa hut, often built on stilts?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Bahay na bato"
+        },
+        {
+          "color": "blue",
+          "label": "Bahay kubo"
+        },
+        {
+          "color": "green",
+          "label": "Sari-sari"
+        },
+        {
+          "color": "yellow",
+          "label": "Balangay"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Bahay kubo",
+      "colorTrap": false
+    },
+    {
+      "id": "Q32",
+      "category": "SCIENCE & NATURE",
+      "prompt": "What is the only continent with no native reptiles or snakes?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Australia"
+        },
+        {
+          "color": "blue",
+          "label": "Antarctica"
+        },
+        {
+          "color": "green",
+          "label": "Europe"
+        },
+        {
+          "color": "yellow",
+          "label": "Asia"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Antarctica",
+      "colorTrap": false
+    },
+    {
+      "id": "Q33",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "What is the name of Belle's father in \"Beauty and the Beast\"?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Maurice"
+        },
+        {
+          "color": "blue",
+          "label": "Gaston"
+        },
+        {
+          "color": "green",
+          "label": "Lumiere"
+        },
+        {
+          "color": "yellow",
+          "label": "Phillipe"
+        }
+      ],
+      "correctColor": "red",
+      "correctLabel": "Maurice",
+      "colorTrap": false
+    },
+    {
+      "id": "Q34",
+      "category": "TEAM PERSONALIZED",
+      "prompt": "Besides the US territory of Puerto Rico, what other country does this team's footprint span, along with the mainland US?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Mexico"
+        },
+        {
+          "color": "blue",
+          "label": "Philippines"
+        },
+        {
+          "color": "green",
+          "label": "Canada"
+        },
+        {
+          "color": "yellow",
+          "label": "Dominican Republic"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Philippines",
+      "colorTrap": false
+    },
+    {
+      "id": "Q35",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "What is the tallest building in the world as of recent record?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Shanghai Tower"
+        },
+        {
+          "color": "blue",
+          "label": "Burj Khalifa"
+        },
+        {
+          "color": "green",
+          "label": "One World Trade Center"
+        },
+        {
+          "color": "yellow",
+          "label": "Petronas Towers"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Burj Khalifa",
+      "colorTrap": false
+    },
+    {
+      "id": "Q36",
+      "category": "POP CULTURE",
+      "prompt": "Which classic board game involves buying and trading properties like Boardwalk and Park Place?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Clue"
+        },
+        {
+          "color": "blue",
+          "label": "Monopoly"
+        },
+        {
+          "color": "green",
+          "label": "Risk"
+        },
+        {
+          "color": "yellow",
+          "label": "Life"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Monopoly",
+      "colorTrap": false
+    },
+    {
+      "id": "Q37",
+      "category": "GEOGRAPHY",
+      "prompt": "What is the largest country in South America?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Argentina"
+        },
+        {
+          "color": "blue",
+          "label": "Brazil"
+        },
+        {
+          "color": "green",
+          "label": "Peru"
+        },
+        {
+          "color": "yellow",
+          "label": "Colombia"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Brazil",
+      "colorTrap": false
+    },
+    {
+      "id": "Q38",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "What is the name of the genie in \"Aladdin\"?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Jafar"
+        },
+        {
+          "color": "blue",
+          "label": "Genie"
+        },
+        {
+          "color": "green",
+          "label": "Sultan"
+        },
+        {
+          "color": "yellow",
+          "label": "Iago"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Genie",
+      "colorTrap": false
+    },
+    {
+      "id": "Q39",
+      "category": "SCIENCE & NATURE",
+      "prompt": "What is the process by which plants lose water through their leaves called?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Respiration"
+        },
+        {
+          "color": "blue",
+          "label": "Transpiration"
+        },
+        {
+          "color": "green",
+          "label": "Photosynthesis"
+        },
+        {
+          "color": "yellow",
+          "label": "Germination"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Transpiration",
+      "colorTrap": false
+    }
+  ],
+  "Lyka": [
+    {
+      "id": "Q40",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "What is the name of Simba's best friend, a warthog, in \"The Lion King\"?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Timon"
+        },
+        {
+          "color": "blue",
+          "label": "Pumbaa"
+        },
+        {
+          "color": "green",
+          "label": "Zazu"
+        },
+        {
+          "color": "yellow",
+          "label": "Rafiki"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Pumbaa",
+      "colorTrap": false
+    },
+    {
+      "id": "Q41",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "How many sides does a hexagon have?",
+      "options": [
+        {
+          "color": "red",
+          "label": "5"
+        },
+        {
+          "color": "blue",
+          "label": "6"
+        },
+        {
+          "color": "green",
+          "label": "7"
+        },
+        {
+          "color": "yellow",
+          "label": "8"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "6",
+      "colorTrap": false
+    },
+    {
+      "id": "Q42",
+      "category": "POP CULTURE",
+      "prompt": "Which artist is known as the \"King of Pop\"?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Elvis Presley"
+        },
+        {
+          "color": "blue",
+          "label": "Prince"
+        },
+        {
+          "color": "green",
+          "label": "Michael Jackson"
+        },
+        {
+          "color": "yellow",
+          "label": "James Brown"
+        }
+      ],
+      "correctColor": "green",
+      "correctLabel": "Michael Jackson",
+      "colorTrap": false
+    },
+    {
+      "id": "Q43",
+      "category": "GEOGRAPHY",
+      "prompt": "**[COLOR TRAP]** What color is the sand on many of Florida's Gulf Coast beaches, famously fine and powdery?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Tan"
+        },
+        {
+          "color": "blue",
+          "label": "Beige"
+        },
+        {
+          "color": "green",
+          "label": "Gold"
+        },
+        {
+          "color": "yellow",
+          "label": "White"
+        }
+      ],
+      "correctColor": "yellow",
+      "correctLabel": "White",
+      "colorTrap": true
+    },
+    {
+      "id": "Q44",
+      "category": "FOOD & CUISINE",
+      "prompt": "What fruit is the main ingredient in a traditional Filipino buko pie?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Mango"
+        },
+        {
+          "color": "blue",
+          "label": "Young coconut"
+        },
+        {
+          "color": "green",
+          "label": "Pineapple"
+        },
+        {
+          "color": "yellow",
+          "label": "Banana"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Young coconut",
+      "colorTrap": false
+    },
+    {
+      "id": "Q45",
+      "category": "BRAIN TEASER",
+      "prompt": "What word begins with an \"e,\" ends with an \"e,\" but contains only one letter?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Envelope"
+        },
+        {
+          "color": "blue",
+          "label": "Eye"
+        },
+        {
+          "color": "green",
+          "label": "Elephant"
+        },
+        {
+          "color": "yellow",
+          "label": "Eagle"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Eye",
+      "colorTrap": false
+    },
+    {
+      "id": "Q46",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "In \"Frozen,\" what is the name of the living snowman?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Sven"
+        },
+        {
+          "color": "blue",
+          "label": "Olaf"
+        },
+        {
+          "color": "green",
+          "label": "Kristoff"
+        },
+        {
+          "color": "yellow",
+          "label": "Marshmallow"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Olaf",
+      "colorTrap": false
+    },
+    {
+      "id": "Q47",
+      "category": "CULTURE",
+      "prompt": "What is the name of the Puerto Rican tradition of neighbors singing door to door during the Christmas season?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Parranda"
+        },
+        {
+          "color": "blue",
+          "label": "Aguinaldo"
+        },
+        {
+          "color": "green",
+          "label": "Posada"
+        },
+        {
+          "color": "yellow",
+          "label": "Villancico"
+        }
+      ],
+      "correctColor": "red",
+      "correctLabel": "Parranda",
+      "colorTrap": false
+    },
+    {
+      "id": "Q48",
+      "category": "SCIENCE & NATURE",
+      "prompt": "What is the only bird that can fly backwards?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Sparrow"
+        },
+        {
+          "color": "blue",
+          "label": "Hummingbird"
+        },
+        {
+          "color": "green",
+          "label": "Swallow"
+        },
+        {
+          "color": "yellow",
+          "label": "Falcon"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Hummingbird",
+      "colorTrap": false
+    },
+    {
+      "id": "Q49",
+      "category": "TEAM PERSONALIZED",
+      "prompt": "What system does Susie complain about most when trying to pull a simple paystub?",
+      "options": [
+        {
+          "color": "red",
+          "label": "QuickBooks"
+        },
+        {
+          "color": "blue",
+          "label": "ADP"
+        },
+        {
+          "color": "green",
+          "label": "Notion"
+        },
+        {
+          "color": "yellow",
+          "label": "Excel"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "ADP",
+      "colorTrap": false
+    },
+    {
+      "id": "Q50",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "What is the capital city of Canada?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Toronto"
+        },
+        {
+          "color": "blue",
+          "label": "Vancouver"
+        },
+        {
+          "color": "green",
+          "label": "Ottawa"
+        },
+        {
+          "color": "yellow",
+          "label": "Montreal"
+        }
+      ],
+      "correctColor": "green",
+      "correctLabel": "Ottawa",
+      "colorTrap": false
+    },
+    {
+      "id": "Q51",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "What is the name of the sea witch in \"The Little Mermaid\"?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Morgana"
+        },
+        {
+          "color": "blue",
+          "label": "Ursula"
+        },
+        {
+          "color": "green",
+          "label": "Vanessa"
+        },
+        {
+          "color": "yellow",
+          "label": "Marina"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Ursula",
+      "colorTrap": false
+    },
+    {
+      "id": "Q52",
+      "category": "POP CULTURE",
+      "prompt": "What was the first social media platform to reach 1 billion users?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Twitter"
+        },
+        {
+          "color": "blue",
+          "label": "Instagram"
+        },
+        {
+          "color": "green",
+          "label": "Facebook"
+        },
+        {
+          "color": "yellow",
+          "label": "YouTube"
+        }
+      ],
+      "correctColor": "green",
+      "correctLabel": "Facebook",
+      "colorTrap": false
+    }
+  ],
+  "Jenny": [
+    {
+      "id": "Q53",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "What is the name of Pinocchio's conscience, depicted as a cricket?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Figaro"
+        },
+        {
+          "color": "blue",
+          "label": "Jiminy Cricket"
+        },
+        {
+          "color": "green",
+          "label": "Geppetto"
+        },
+        {
+          "color": "yellow",
+          "label": "Honest John"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Jiminy Cricket",
+      "colorTrap": false
+    },
+    {
+      "id": "Q54",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "What is the freezing point of water in Celsius?",
+      "options": [
+        {
+          "color": "red",
+          "label": "32"
+        },
+        {
+          "color": "blue",
+          "label": "0"
+        },
+        {
+          "color": "green",
+          "label": "100"
+        },
+        {
+          "color": "yellow",
+          "label": "-1"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "0",
+      "colorTrap": false
+    },
+    {
+      "id": "Q55",
+      "category": "GEOGRAPHY",
+      "prompt": "What is the largest desert in the world, counting polar deserts?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Sahara"
+        },
+        {
+          "color": "blue",
+          "label": "Gobi"
+        },
+        {
+          "color": "green",
+          "label": "Antarctic Desert"
+        },
+        {
+          "color": "yellow",
+          "label": "Arabian Desert"
+        }
+      ],
+      "correctColor": "green",
+      "correctLabel": "Antarctic Desert",
+      "colorTrap": false
     },
     {
       "id": "Q56",
       "category": "FOOD & CUISINE",
-      "prompt": "**[COLOR TRAP]** Key lime pie, a Florida staple, is traditionally what color inside despite common misconceptions?",
+      "prompt": "**[COLOR TRAP]** What color is a plantain's skin when it is ripe enough for sweet maduros?",
       "options": [
         {
           "color": "red",
@@ -1558,7 +1558,560 @@ export const PRIMARY_QUESTIONS: Record<PlayerName, GameQuestion[]> = {
         },
         {
           "color": "blue",
-          "label": "Pale yellow"
+          "label": "Yellow"
+        },
+        {
+          "color": "green",
+          "label": "Brown"
+        },
+        {
+          "color": "yellow",
+          "label": "Black"
+        }
+      ],
+      "correctColor": "yellow",
+      "correctLabel": "Black",
+      "colorTrap": true
+    },
+    {
+      "id": "Q57",
+      "category": "BRAIN TEASER",
+      "prompt": "What can fill a room but takes up no space?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Smoke"
+        },
+        {
+          "color": "blue",
+          "label": "Light"
+        },
+        {
+          "color": "green",
+          "label": "Sound"
+        },
+        {
+          "color": "yellow",
+          "label": "Air"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Light",
+      "colorTrap": false
+    },
+    {
+      "id": "Q58",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "In \"Mulan,\" what is the name of Mulan's small dragon companion?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Mushu"
+        },
+        {
+          "color": "blue",
+          "label": "Cri-Kee"
+        },
+        {
+          "color": "green",
+          "label": "Khan"
+        },
+        {
+          "color": "yellow",
+          "label": "Shan Yu"
+        }
+      ],
+      "correctColor": "red",
+      "correctLabel": "Mushu",
+      "colorTrap": false
+    },
+    {
+      "id": "Q59",
+      "category": "CULTURE",
+      "prompt": "What is the term for the traditional Filipino practice of neighbors helping move an entire house together?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Bayanihan"
+        },
+        {
+          "color": "blue",
+          "label": "Kapwa"
+        },
+        {
+          "color": "green",
+          "label": "Damayan"
+        },
+        {
+          "color": "yellow",
+          "label": "Pakikisama"
+        }
+      ],
+      "correctColor": "red",
+      "correctLabel": "Bayanihan",
+      "colorTrap": false
+    },
+    {
+      "id": "Q60",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "Which country has the most natural lakes in the world?",
+      "options": [
+        {
+          "color": "red",
+          "label": "United States"
+        },
+        {
+          "color": "blue",
+          "label": "Russia"
+        },
+        {
+          "color": "green",
+          "label": "Canada"
+        },
+        {
+          "color": "yellow",
+          "label": "Finland"
+        }
+      ],
+      "correctColor": "green",
+      "correctLabel": "Canada",
+      "colorTrap": false
+    },
+    {
+      "id": "Q61",
+      "category": "TEAM PERSONALIZED",
+      "prompt": "What is the name of Susie's Shorkie Poo, whose breed stumped the team on game night?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Morticia"
+        },
+        {
+          "color": "blue",
+          "label": "Roo"
+        },
+        {
+          "color": "green",
+          "label": "Rex"
+        },
+        {
+          "color": "yellow",
+          "label": "Bear"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Roo",
+      "colorTrap": false
+    },
+    {
+      "id": "Q62",
+      "category": "POP CULTURE",
+      "prompt": "Which classic handheld game system, released in 1989, introduced the world to Tetris on the go?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Sega Game Gear"
+        },
+        {
+          "color": "blue",
+          "label": "Game Boy"
+        },
+        {
+          "color": "green",
+          "label": "Atari Lynx"
+        },
+        {
+          "color": "yellow",
+          "label": "TurboExpress"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Game Boy",
+      "colorTrap": false
+    },
+    {
+      "id": "Q63",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "What is the name of the evil stepmother in \"Cinderella\"?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Lady Tremaine"
+        },
+        {
+          "color": "blue",
+          "label": "Madame Medusa"
+        },
+        {
+          "color": "green",
+          "label": "Yzma"
+        },
+        {
+          "color": "yellow",
+          "label": "Mother Gothel"
+        }
+      ],
+      "correctColor": "red",
+      "correctLabel": "Lady Tremaine",
+      "colorTrap": false
+    },
+    {
+      "id": "Q64",
+      "category": "SCIENCE & NATURE",
+      "prompt": "What is the hardest working muscle in the human body, beating roughly 100,000 times a day?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Diaphragm"
+        },
+        {
+          "color": "blue",
+          "label": "Heart"
+        },
+        {
+          "color": "green",
+          "label": "Jaw muscle"
+        },
+        {
+          "color": "yellow",
+          "label": "Bicep"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Heart",
+      "colorTrap": false
+    },
+    {
+      "id": "Q65",
+      "category": "GEOGRAPHY",
+      "prompt": "What is the name of the mountain range running through much of Puerto Rico's interior?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Cordillera Central"
+        },
+        {
+          "color": "blue",
+          "label": "Sierra Maestra"
+        },
+        {
+          "color": "green",
+          "label": "Sierra Madre"
+        },
+        {
+          "color": "yellow",
+          "label": "Cordillera Oriental"
+        }
+      ],
+      "correctColor": "red",
+      "correctLabel": "Cordillera Central",
+      "colorTrap": false
+    }
+  ]
+};
+
+export const RESERVE_QUESTIONS: Record<PlayerName, GameQuestion[]> = {
+  "Stephanny": [
+    {
+      "id": "R66",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "What is the largest internal organ in the human body?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Skin"
+        },
+        {
+          "color": "blue",
+          "label": "Liver"
+        },
+        {
+          "color": "green",
+          "label": "Lungs"
+        },
+        {
+          "color": "yellow",
+          "label": "Brain"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Liver",
+      "colorTrap": false
+    },
+    {
+      "id": "R67",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "What is the name of Rapunzel's chameleon companion in \"Tangled\"?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Flounder"
+        },
+        {
+          "color": "blue",
+          "label": "Pascal"
+        },
+        {
+          "color": "green",
+          "label": "Mushu"
+        },
+        {
+          "color": "yellow",
+          "label": "Iago"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Pascal",
+      "colorTrap": false
+    },
+    {
+      "id": "R68",
+      "category": "POP CULTURE",
+      "prompt": "What was the first video game to sell over 100 million copies?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Minecraft"
+        },
+        {
+          "color": "blue",
+          "label": "Tetris"
+        },
+        {
+          "color": "green",
+          "label": "Grand Theft Auto V"
+        },
+        {
+          "color": "yellow",
+          "label": "Wii Sports"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Tetris",
+      "colorTrap": false
+    },
+    {
+      "id": "R69",
+      "category": "GEOGRAPHY",
+      "prompt": "What is the smallest continent by land area?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Europe"
+        },
+        {
+          "color": "blue",
+          "label": "Antarctica"
+        },
+        {
+          "color": "green",
+          "label": "Australia"
+        },
+        {
+          "color": "yellow",
+          "label": "South America"
+        }
+      ],
+      "correctColor": "green",
+      "correctLabel": "Australia",
+      "colorTrap": false
+    },
+    {
+      "id": "R70",
+      "category": "BRAIN TEASER",
+      "prompt": "What is full of holes but still holds water?",
+      "options": [
+        {
+          "color": "red",
+          "label": "A net"
+        },
+        {
+          "color": "blue",
+          "label": "A sponge"
+        },
+        {
+          "color": "green",
+          "label": "A bucket"
+        },
+        {
+          "color": "yellow",
+          "label": "A sieve"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "A sponge",
+      "colorTrap": false
+    },
+    {
+      "id": "R91",
+      "category": "COLOR TRAP",
+      "prompt": "What color are Mickey Mouse's classic shorts?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Black"
+        },
+        {
+          "color": "blue",
+          "label": "Yellow"
+        },
+        {
+          "color": "green",
+          "label": "Red"
+        },
+        {
+          "color": "yellow",
+          "label": "Blue"
+        }
+      ],
+      "correctColor": "green",
+      "correctLabel": "Red",
+      "colorTrap": true
+    }
+  ],
+  "Giann": [
+    {
+      "id": "R71",
+      "category": "FOOD & CUISINE",
+      "prompt": "What Filipino street food consists of marinated, grilled meat on a skewer?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Lumpia"
+        },
+        {
+          "color": "blue",
+          "label": "Isaw"
+        },
+        {
+          "color": "green",
+          "label": "Inasal"
+        },
+        {
+          "color": "yellow",
+          "label": "Barbecue stick"
+        }
+      ],
+      "correctColor": "yellow",
+      "correctLabel": "Barbecue stick",
+      "colorTrap": false
+    },
+    {
+      "id": "R72",
+      "category": "SCIENCE & NATURE",
+      "prompt": "What is the name for an animal that eats both plants and meat?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Herbivore"
+        },
+        {
+          "color": "blue",
+          "label": "Carnivore"
+        },
+        {
+          "color": "green",
+          "label": "Omnivore"
+        },
+        {
+          "color": "yellow",
+          "label": "Insectivore"
+        }
+      ],
+      "correctColor": "green",
+      "correctLabel": "Omnivore",
+      "colorTrap": false
+    },
+    {
+      "id": "R73",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "What is the name of the magic carpet in \"Aladdin\"?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Rajah"
+        },
+        {
+          "color": "blue",
+          "label": "Carpet"
+        },
+        {
+          "color": "green",
+          "label": "Abu"
+        },
+        {
+          "color": "yellow",
+          "label": "It has no name, just \"Magic Carpet\""
+        }
+      ],
+      "correctColor": "yellow",
+      "correctLabel": "It has no name, just \"Magic Carpet\"",
+      "colorTrap": false
+    },
+    {
+      "id": "R74",
+      "category": "CULTURE",
+      "prompt": "The Puerto Rican coqui, famous for its nighttime call, is what kind of creature?",
+      "options": [
+        {
+          "color": "red",
+          "label": "A bird"
+        },
+        {
+          "color": "blue",
+          "label": "A frog"
+        },
+        {
+          "color": "green",
+          "label": "A lizard"
+        },
+        {
+          "color": "yellow",
+          "label": "A cricket"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "A frog",
+      "colorTrap": false
+    },
+    {
+      "id": "R75",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "What is the most commonly spoken language in the world, counting first and second language speakers combined?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Mandarin"
+        },
+        {
+          "color": "blue",
+          "label": "English"
+        },
+        {
+          "color": "green",
+          "label": "Spanish"
+        },
+        {
+          "color": "yellow",
+          "label": "Hindi"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "English",
+      "colorTrap": false
+    },
+    {
+      "id": "R92",
+      "category": "COLOR TRAP",
+      "prompt": "What color is Elsa's iconic gown in \"Frozen,\" best described?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Ice blue"
+        },
+        {
+          "color": "blue",
+          "label": "Purple"
         },
         {
           "color": "green",
@@ -1566,147 +2119,281 @@ export const PRIMARY_QUESTIONS: Record<PlayerName, GameQuestion[]> = {
         },
         {
           "color": "yellow",
-          "label": "Yellow"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Pale yellow",
-      "colorTrap": true
-    },
-    {
-      "id": "Q57",
-      "category": "BRAIN TEASER",
-      "prompt": "What comes once in a minute, twice in a moment, but never in a thousand years?",
-      "options": [
-        {
-          "color": "red",
-          "label": "The letter M"
-        },
-        {
-          "color": "blue",
-          "label": "A second"
-        },
-        {
-          "color": "green",
-          "label": "A heartbeat"
-        },
-        {
-          "color": "yellow",
-          "label": "A blink"
+          "label": "Silver"
         }
       ],
       "correctColor": "red",
-      "correctLabel": "The letter M",
-      "colorTrap": false
-    },
+      "correctLabel": "Ice blue",
+      "colorTrap": true
+    }
+  ],
+  "Francisco": [
     {
-      "id": "Q58",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "What is the tallest mountain in the world, measured from sea level?",
+      "id": "R76",
+      "category": "POP CULTURE",
+      "prompt": "What was the first feature film to win the Academy Award for Best Picture?",
       "options": [
         {
           "color": "red",
-          "label": "K2"
+          "label": "Gone with the Wind"
         },
         {
           "color": "blue",
-          "label": "Mount Everest"
+          "label": "Wings"
         },
         {
           "color": "green",
-          "label": "Denali"
+          "label": "Casablanca"
         },
         {
           "color": "yellow",
-          "label": "Kilimanjaro"
+          "label": "It Happened One Night"
         }
       ],
       "correctColor": "blue",
-      "correctLabel": "Mount Everest",
+      "correctLabel": "Wings",
       "colorTrap": false
     },
     {
-      "id": "Q59",
-      "category": "CULTURE",
-      "prompt": "What is the name of the giant, multi-day Puerto Rican festival held in Ponce, famous for its elaborate masked \"vejigante\" costumes?",
+      "id": "R77",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "What is the name of the clownfish searching for his son in \"Finding Nemo\"?",
       "options": [
         {
           "color": "red",
-          "label": "Fiestas de la Calle San Sebastián"
+          "label": "Dory"
         },
         {
           "color": "blue",
-          "label": "Carnaval Ponceño"
+          "label": "Marlin"
         },
         {
           "color": "green",
-          "label": "Día de Reyes"
+          "label": "Gill"
         },
         {
           "color": "yellow",
-          "label": "Las Navidades"
+          "label": "Crush"
         }
       ],
       "correctColor": "blue",
-      "correctLabel": "Carnaval Ponceño",
+      "correctLabel": "Marlin",
       "colorTrap": false
     },
     {
-      "id": "Q60",
-      "category": "SCIENCE & NATURE",
-      "prompt": "What is the largest organ in the human body?",
+      "id": "R78",
+      "category": "GEOGRAPHY",
+      "prompt": "What is the predominantly Muslim region of the Philippines, located in Mindanao?",
       "options": [
         {
           "color": "red",
-          "label": "Liver"
+          "label": "Visayas"
         },
         {
           "color": "blue",
-          "label": "Brain"
+          "label": "Bicol"
         },
         {
           "color": "green",
-          "label": "Skin"
+          "label": "Bangsamoro"
         },
         {
           "color": "yellow",
-          "label": "Lungs"
+          "label": "Cordillera"
         }
       ],
       "correctColor": "green",
-      "correctLabel": "Skin",
+      "correctLabel": "Bangsamoro",
       "colorTrap": false
     },
     {
-      "id": "Q61",
-      "category": "TEAM PERSONALIZED",
-      "prompt": "Susie's team spans three locations. Which one is NOT one of them?",
+      "id": "R79",
+      "category": "BRAIN TEASER",
+      "prompt": "What has keys but no locks, space but no room, and you can enter but never go inside?",
       "options": [
         {
           "color": "red",
-          "label": "Florida"
+          "label": "A house"
         },
         {
           "color": "blue",
-          "label": "Puerto Rico"
+          "label": "A keyboard"
         },
         {
           "color": "green",
-          "label": "Philippines"
+          "label": "A piano"
         },
         {
           "color": "yellow",
-          "label": "Mexico"
+          "label": "A safe"
         }
       ],
-      "correctColor": "yellow",
-      "correctLabel": "Mexico",
+      "correctColor": "blue",
+      "correctLabel": "A keyboard",
       "colorTrap": false
     },
     {
-      "id": "Q62",
+      "id": "R80",
+      "category": "FOOD & CUISINE",
+      "prompt": "What classic Florida dessert is made with graham cracker crust, condensed milk, and key lime juice?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Key lime pie"
+        },
+        {
+          "color": "blue",
+          "label": "Conch fritters"
+        },
+        {
+          "color": "green",
+          "label": "Flan"
+        },
+        {
+          "color": "yellow",
+          "label": "Cuban pastelito"
+        }
+      ],
+      "correctColor": "red",
+      "correctLabel": "Key lime pie",
+      "colorTrap": false
+    },
+    {
+      "id": "R93",
+      "category": "COLOR TRAP",
+      "prompt": "What color is Shrek's skin?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Purple"
+        },
+        {
+          "color": "blue",
+          "label": "Green"
+        },
+        {
+          "color": "green",
+          "label": "Yellow"
+        },
+        {
+          "color": "yellow",
+          "label": "Blue"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Green",
+      "colorTrap": true
+    }
+  ],
+  "Lyka": [
+    {
+      "id": "R81",
+      "category": "SCIENCE & NATURE",
+      "prompt": "What force keeps planets in orbit around the sun?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Magnetism"
+        },
+        {
+          "color": "blue",
+          "label": "Gravity"
+        },
+        {
+          "color": "green",
+          "label": "Friction"
+        },
+        {
+          "color": "yellow",
+          "label": "Momentum"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Gravity",
+      "colorTrap": false
+    },
+    {
+      "id": "R82",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "What is the name of Woody's rival turned friend space ranger toy in \"Toy Story\"?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Rex"
+        },
+        {
+          "color": "blue",
+          "label": "Buzz Lightyear"
+        },
+        {
+          "color": "green",
+          "label": "Mr. Potato Head"
+        },
+        {
+          "color": "yellow",
+          "label": "Hamm"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Buzz Lightyear",
+      "colorTrap": false
+    },
+    {
+      "id": "R83",
+      "category": "TEAM PERSONALIZED",
+      "prompt": "What game show format did Susie's accounting team famously bomb every single question in, on trivia night?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Family Feud style"
+        },
+        {
+          "color": "blue",
+          "label": "Wheel of Fortune style"
+        },
+        {
+          "color": "green",
+          "label": "Jeopardy style"
+        },
+        {
+          "color": "yellow",
+          "label": "Trivial Pursuit style"
+        }
+      ],
+      "correctColor": "green",
+      "correctLabel": "Jeopardy style",
+      "colorTrap": false
+    },
+    {
+      "id": "R84",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "What is the term for a word that reads the same forwards and backwards?",
+      "options": [
+        {
+          "color": "red",
+          "label": "Anagram"
+        },
+        {
+          "color": "blue",
+          "label": "Palindrome"
+        },
+        {
+          "color": "green",
+          "label": "Acronym"
+        },
+        {
+          "color": "yellow",
+          "label": "Homophone"
+        }
+      ],
+      "correctColor": "blue",
+      "correctLabel": "Palindrome",
+      "colorTrap": false
+    },
+    {
+      "id": "R85",
       "category": "POP CULTURE",
-      "prompt": "What was the first feature-length animated film ever released by Disney?",
+      "prompt": "What was the first Disney animated feature film ever released, in 1937?",
       "options": [
         {
           "color": "red",
@@ -1730,874 +2417,187 @@ export const PRIMARY_QUESTIONS: Record<PlayerName, GameQuestion[]> = {
       "colorTrap": false
     },
     {
-      "id": "Q63",
-      "category": "GEOGRAPHY",
-      "prompt": "Which of these Florida cities is furthest south?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Tampa"
-        },
-        {
-          "color": "blue",
-          "label": "Orlando"
-        },
-        {
-          "color": "green",
-          "label": "Key West"
-        },
-        {
-          "color": "yellow",
-          "label": "Jacksonville"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Key West",
-      "colorTrap": false
-    },
-    {
-      "id": "Q64",
-      "category": "BRAIN TEASER",
-      "prompt": "What has a neck but no head?",
-      "options": [
-        {
-          "color": "red",
-          "label": "A guitar"
-        },
-        {
-          "color": "blue",
-          "label": "A bottle"
-        },
-        {
-          "color": "green",
-          "label": "A shirt"
-        },
-        {
-          "color": "yellow",
-          "label": "A giraffe"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "A bottle",
-      "colorTrap": false
-    },
-    {
-      "id": "Q65",
-      "category": "FOOD & CUISINE",
-      "prompt": "What spice, central to Filipino adobo and many Caribbean dishes, comes from dried tree bark?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Nutmeg"
-        },
-        {
-          "color": "blue",
-          "label": "Cinnamon"
-        },
-        {
-          "color": "green",
-          "label": "Clove"
-        },
-        {
-          "color": "yellow",
-          "label": "Bay leaf"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Cinnamon",
-      "colorTrap": false
-    }
-  ]
-};
-
-export const RESERVE_QUESTIONS: Record<PlayerName, GameQuestion[]> = {
-  "Stephanny": [
-    {
-      "id": "R66",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "What is the chemical symbol for gold?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Go"
-        },
-        {
-          "color": "blue",
-          "label": "Gd"
-        },
-        {
-          "color": "green",
-          "label": "Au"
-        },
-        {
-          "color": "yellow",
-          "label": "Ag"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Au",
-      "colorTrap": false
-    },
-    {
-      "id": "R67",
-      "category": "POP CULTURE",
-      "prompt": "Who directed \"Jaws,\" \"E.T.,\" and \"Jurassic Park\"?",
-      "options": [
-        {
-          "color": "red",
-          "label": "George Lucas"
-        },
-        {
-          "color": "blue",
-          "label": "Steven Spielberg"
-        },
-        {
-          "color": "green",
-          "label": "James Cameron"
-        },
-        {
-          "color": "yellow",
-          "label": "Ron Howard"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Steven Spielberg",
-      "colorTrap": false
-    },
-    {
-      "id": "R68",
-      "category": "GEOGRAPHY",
-      "prompt": "What is the second-largest country in the world by land area?",
-      "options": [
-        {
-          "color": "red",
-          "label": "China"
-        },
-        {
-          "color": "blue",
-          "label": "United States"
-        },
-        {
-          "color": "green",
-          "label": "Canada"
-        },
-        {
-          "color": "yellow",
-          "label": "Russia"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Canada",
-      "colorTrap": false
-    },
-    {
-      "id": "R69",
-      "category": "BRAIN TEASER",
-      "prompt": "What has a bank but no money?",
-      "options": [
-        {
-          "color": "red",
-          "label": "A safe"
-        },
-        {
-          "color": "blue",
-          "label": "A river"
-        },
-        {
-          "color": "green",
-          "label": "A vault"
-        },
-        {
-          "color": "yellow",
-          "label": "An ATM"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "A river",
-      "colorTrap": false
-    },
-    {
-      "id": "R70",
-      "category": "FOOD & CUISINE",
-      "prompt": "What Puerto Rican dish consists of green plantains fried, mashed, and formed into a bowl, often filled with meat or seafood?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Alcapurria"
-        },
-        {
-          "color": "blue",
-          "label": "Piononos"
-        },
-        {
-          "color": "green",
-          "label": "Mofongo relleno"
-        },
-        {
-          "color": "yellow",
-          "label": "Arroz con gandules"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Mofongo relleno",
-      "colorTrap": false
-    },
-    {
-      "id": "R91",
-      "category": "COLOR TRAP",
-      "prompt": "What color is a giraffe's tongue?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Blue-black"
-        },
-        {
-          "color": "blue",
-          "label": "Pink"
-        },
-        {
-          "color": "green",
-          "label": "Brown"
-        },
-        {
-          "color": "yellow",
-          "label": "Purple"
-        }
-      ],
-      "correctColor": "red",
-      "correctLabel": "Blue-black",
-      "colorTrap": true
-    }
-  ],
-  "Giann": [
-    {
-      "id": "R71",
-      "category": "SCIENCE & NATURE",
-      "prompt": "What is the fastest land animal in the world?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Lion"
-        },
-        {
-          "color": "blue",
-          "label": "Cheetah"
-        },
-        {
-          "color": "green",
-          "label": "Pronghorn Antelope"
-        },
-        {
-          "color": "yellow",
-          "label": "Greyhound"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Cheetah",
-      "colorTrap": false
-    },
-    {
-      "id": "R72",
-      "category": "CULTURE",
-      "prompt": "What is the traditional Filipino greeting gesture where a younger person presses an elder's hand to their forehead as a sign of respect?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Mano"
-        },
-        {
-          "color": "blue",
-          "label": "Bayanihan"
-        },
-        {
-          "color": "green",
-          "label": "Kumustahan"
-        },
-        {
-          "color": "yellow",
-          "label": "Pagmamano"
-        }
-      ],
-      "correctColor": "yellow",
-      "correctLabel": "Pagmamano",
-      "colorTrap": false
-    },
-    {
-      "id": "R73",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "How many time zones does the continental United States span?",
-      "options": [
-        {
-          "color": "red",
-          "label": "3"
-        },
-        {
-          "color": "blue",
-          "label": "4"
-        },
-        {
-          "color": "green",
-          "label": "5"
-        },
-        {
-          "color": "yellow",
-          "label": "6"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "4",
-      "colorTrap": false
-    },
-    {
-      "id": "R74",
-      "category": "POP CULTURE",
-      "prompt": "What board game features characters like Colonel Mustard and Professor Plum?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Monopoly"
-        },
-        {
-          "color": "blue",
-          "label": "Clue"
-        },
-        {
-          "color": "green",
-          "label": "Risk"
-        },
-        {
-          "color": "yellow",
-          "label": "Life"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Clue",
-      "colorTrap": false
-    },
-    {
-      "id": "R75",
-      "category": "BRAIN TEASER",
-      "prompt": "What can you catch but never throw?",
-      "options": [
-        {
-          "color": "red",
-          "label": "A ball"
-        },
-        {
-          "color": "blue",
-          "label": "A cold"
-        },
-        {
-          "color": "green",
-          "label": "A fish"
-        },
-        {
-          "color": "yellow",
-          "label": "A break"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "A cold",
-      "colorTrap": false
-    },
-    {
-      "id": "R92",
-      "category": "COLOR TRAP",
-      "prompt": "What color is the flesh of a dragon fruit, the most common variety sold in stores?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Purple"
-        },
-        {
-          "color": "blue",
-          "label": "Pink"
-        },
-        {
-          "color": "green",
-          "label": "Red"
-        },
-        {
-          "color": "yellow",
-          "label": "White"
-        }
-      ],
-      "correctColor": "yellow",
-      "correctLabel": "White",
-      "colorTrap": true
-    }
-  ],
-  "Francisco": [
-    {
-      "id": "R76",
-      "category": "GEOGRAPHY",
-      "prompt": "What is the only U.S. state that grows coffee commercially?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Florida"
-        },
-        {
-          "color": "blue",
-          "label": "California"
-        },
-        {
-          "color": "green",
-          "label": "Hawaii"
-        },
-        {
-          "color": "yellow",
-          "label": "Puerto Rico is a territory, so continental U.S. only"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Hawaii",
-      "colorTrap": false
-    },
-    {
-      "id": "R77",
-      "category": "FOOD & CUISINE",
-      "prompt": "What Florida seafood dish is traditionally made with conch pounded thin, breaded, and fried?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Conch fritters"
-        },
-        {
-          "color": "blue",
-          "label": "Conch chowder"
-        },
-        {
-          "color": "green",
-          "label": "Cracked conch"
-        },
-        {
-          "color": "yellow",
-          "label": "Conch ceviche"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Cracked conch",
-      "colorTrap": false
-    },
-    {
-      "id": "R78",
-      "category": "SCIENCE & NATURE",
-      "prompt": "What is the name for a group of flamingos?",
-      "options": [
-        {
-          "color": "red",
-          "label": "A flock"
-        },
-        {
-          "color": "blue",
-          "label": "A flamboyance"
-        },
-        {
-          "color": "green",
-          "label": "A colony"
-        },
-        {
-          "color": "yellow",
-          "label": "A pack"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "A flamboyance",
-      "colorTrap": false
-    },
-    {
-      "id": "R79",
-      "category": "TEAM PERSONALIZED",
-      "prompt": "What ADP module does Susie always end up muttering about under her breath?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Payroll"
-        },
-        {
-          "color": "blue",
-          "label": "Pay Statements"
-        },
-        {
-          "color": "green",
-          "label": "Time & Attendance"
-        },
-        {
-          "color": "yellow",
-          "label": "All of it, honestly"
-        }
-      ],
-      "correctColor": "yellow",
-      "correctLabel": "All of it, honestly",
-      "colorTrap": false
-    },
-    {
-      "id": "R80",
-      "category": "POP CULTURE",
-      "prompt": "What was the first video game character to become a global pop culture icon, debuting in 1981?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Sonic"
-        },
-        {
-          "color": "blue",
-          "label": "Mario"
-        },
-        {
-          "color": "green",
-          "label": "Pac-Man"
-        },
-        {
-          "color": "yellow",
-          "label": "Link"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Mario",
-      "colorTrap": false
-    },
-    {
-      "id": "R93",
-      "category": "COLOR TRAP",
-      "prompt": "What color is the center of a Florida key lime, before it's juiced?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Yellow"
-        },
-        {
-          "color": "blue",
-          "label": "Green"
-        },
-        {
-          "color": "green",
-          "label": "White"
-        },
-        {
-          "color": "yellow",
-          "label": "Orange"
-        }
-      ],
-      "correctColor": "red",
-      "correctLabel": "Yellow",
-      "colorTrap": true
-    }
-  ],
-  "Lyka": [
-    {
-      "id": "R81",
-      "category": "GEOGRAPHY",
-      "prompt": "Which Philippine island group is home to the Chocolate Hills, a famous natural rock formation?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Luzon"
-        },
-        {
-          "color": "blue",
-          "label": "Bohol"
-        },
-        {
-          "color": "green",
-          "label": "Palawan"
-        },
-        {
-          "color": "yellow",
-          "label": "Cebu"
-        }
-      ],
-      "correctColor": "blue",
-      "correctLabel": "Bohol",
-      "colorTrap": false
-    },
-    {
-      "id": "R82",
-      "category": "BRAIN TEASER",
-      "prompt": "I am not alive, but I grow. I don't have lungs, but I need air. What am I?",
-      "options": [
-        {
-          "color": "red",
-          "label": "A tree"
-        },
-        {
-          "color": "blue",
-          "label": "A crystal"
-        },
-        {
-          "color": "green",
-          "label": "Fire"
-        },
-        {
-          "color": "yellow",
-          "label": "A shadow"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Fire",
-      "colorTrap": false
-    },
-    {
-      "id": "R83",
-      "category": "GENERAL KNOWLEDGE",
-      "prompt": "What is the world's most spoken native language?",
-      "options": [
-        {
-          "color": "red",
-          "label": "English"
-        },
-        {
-          "color": "blue",
-          "label": "Spanish"
-        },
-        {
-          "color": "green",
-          "label": "Mandarin Chinese"
-        },
-        {
-          "color": "yellow",
-          "label": "Hindi"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Mandarin Chinese",
-      "colorTrap": false
-    },
-    {
-      "id": "R84",
-      "category": "SCIENCE & NATURE",
-      "prompt": "What part of the plant conducts photosynthesis?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Roots"
-        },
-        {
-          "color": "blue",
-          "label": "Stem"
-        },
-        {
-          "color": "green",
-          "label": "Leaves"
-        },
-        {
-          "color": "yellow",
-          "label": "Flowers"
-        }
-      ],
-      "correctColor": "green",
-      "correctLabel": "Leaves",
-      "colorTrap": false
-    },
-    {
-      "id": "R85",
-      "category": "FOOD & CUISINE",
-      "prompt": "What Filipino noodle dish is traditionally served at birthdays to symbolize long life?",
-      "options": [
-        {
-          "color": "red",
-          "label": "Pancit"
-        },
-        {
-          "color": "blue",
-          "label": "Lumpia"
-        },
-        {
-          "color": "green",
-          "label": "Bihon"
-        },
-        {
-          "color": "yellow",
-          "label": "Sotanghon"
-        }
-      ],
-      "correctColor": "red",
-      "correctLabel": "Pancit",
-      "colorTrap": false
-    },
-    {
       "id": "R94",
       "category": "COLOR TRAP",
-      "prompt": "The word \"BLUE\" is displayed in yellow text. What color is the text?",
+      "prompt": "The ruby slippers in \"The Wizard of Oz\" are best described as what color?",
       "options": [
         {
           "color": "red",
-          "label": "Yellow"
+          "label": "Pink"
         },
         {
           "color": "blue",
-          "label": "Green"
+          "label": "Silver"
         },
         {
           "color": "green",
-          "label": "Purple"
+          "label": "Gold"
         },
         {
           "color": "yellow",
-          "label": "Blue"
+          "label": "Ruby red"
         }
       ],
-      "correctColor": "red",
-      "correctLabel": "Yellow",
+      "correctColor": "yellow",
+      "correctLabel": "Ruby red",
       "colorTrap": true
     }
   ],
   "Jenny": [
     {
       "id": "R86",
-      "category": "CULTURE",
-      "prompt": "What is the Spanish word for the small, historic plazas found at the center of most Puerto Rican towns?",
+      "category": "DISNEY CHARACTERS",
+      "prompt": "Who is Ariel's human love interest in \"The Little Mermaid\"?",
       "options": [
         {
           "color": "red",
-          "label": "Barrio"
+          "label": "Prince Charming"
         },
         {
           "color": "blue",
-          "label": "Plaza"
+          "label": "Prince Eric"
         },
         {
           "color": "green",
-          "label": "Casco"
+          "label": "Prince Philip"
         },
         {
           "color": "yellow",
-          "label": "Centro"
+          "label": "Prince Adam"
         }
       ],
       "correctColor": "blue",
-      "correctLabel": "Plaza",
+      "correctLabel": "Prince Eric",
       "colorTrap": false
     },
     {
       "id": "R87",
-      "category": "POP CULTURE",
-      "prompt": "Which fast food chain's mascot is a purple, blob-like creature named Grimace?",
+      "category": "GENERAL KNOWLEDGE",
+      "prompt": "What is the capital of Puerto Rico?",
       "options": [
         {
           "color": "red",
-          "label": "Wendy's"
+          "label": "Ponce"
         },
         {
           "color": "blue",
-          "label": "Burger King"
+          "label": "San Juan"
         },
         {
           "color": "green",
-          "label": "McDonald's"
+          "label": "Bayamón"
         },
         {
           "color": "yellow",
-          "label": "Jack in the Box"
+          "label": "Caguas"
         }
       ],
-      "correctColor": "green",
-      "correctLabel": "McDonald's",
+      "correctColor": "blue",
+      "correctLabel": "San Juan",
       "colorTrap": false
     },
     {
       "id": "R88",
-      "category": "GEOGRAPHY",
-      "prompt": "What is the northernmost major city in Florida?",
+      "category": "POP CULTURE",
+      "prompt": "What was the first fully computer animated film to earn a Best Picture Oscar nomination?",
       "options": [
         {
           "color": "red",
-          "label": "Miami"
+          "label": "Up"
         },
         {
           "color": "blue",
-          "label": "Tampa"
+          "label": "Toy Story 3"
         },
         {
           "color": "green",
-          "label": "Orlando"
+          "label": "Shrek"
         },
         {
           "color": "yellow",
-          "label": "Jacksonville"
+          "label": "Wall-E"
         }
       ],
-      "correctColor": "yellow",
-      "correctLabel": "Jacksonville",
+      "correctColor": "red",
+      "correctLabel": "Up",
       "colorTrap": false
     },
     {
       "id": "R89",
-      "category": "BRAIN TEASER",
-      "prompt": "What five-letter word becomes shorter when you add two letters to it?",
+      "category": "SCIENCE & NATURE",
+      "prompt": "Roughly how many taste buds does the average human tongue have?",
       "options": [
         {
           "color": "red",
-          "label": "Small"
+          "label": "200"
         },
         {
           "color": "blue",
-          "label": "Short"
+          "label": "2,000"
         },
         {
           "color": "green",
-          "label": "Brief"
+          "label": "10,000"
         },
         {
           "color": "yellow",
-          "label": "Tiny"
+          "label": "50,000"
         }
       ],
-      "correctColor": "blue",
-      "correctLabel": "Short",
+      "correctColor": "green",
+      "correctLabel": "10,000",
       "colorTrap": false
     },
     {
       "id": "R90",
-      "category": "SCIENCE & NATURE",
-      "prompt": "What is the term for an animal that is active primarily at night?",
+      "category": "CULTURE",
+      "prompt": "What is the term for the Puerto Rican diaspora community based mainly in the northeastern United States, especially New York?",
       "options": [
         {
           "color": "red",
-          "label": "Diurnal"
+          "label": "Nuyorican"
         },
         {
           "color": "blue",
-          "label": "Nocturnal"
+          "label": "Boricua"
         },
         {
           "color": "green",
-          "label": "Crepuscular"
+          "label": "Taino"
         },
         {
           "color": "yellow",
-          "label": "Dormant"
+          "label": "Jíbaro"
         }
       ],
-      "correctColor": "blue",
-      "correctLabel": "Nocturnal",
+      "correctColor": "red",
+      "correctLabel": "Nuyorican",
       "colorTrap": false
     },
     {
       "id": "R95",
       "category": "COLOR TRAP",
-      "prompt": "What color is a traditional Puerto Rican flamboyán (flame tree) in full bloom?",
+      "prompt": "What color is the Genie in \"Aladdin\" most commonly depicted as?",
       "options": [
         {
           "color": "red",
-          "label": "Yellow"
+          "label": "Blue"
         },
         {
           "color": "blue",
-          "label": "Orange"
+          "label": "Green"
         },
         {
           "color": "green",
-          "label": "Purple"
+          "label": "Gold"
         },
         {
           "color": "yellow",
           "label": "Red"
         }
       ],
-      "correctColor": "yellow",
-      "correctLabel": "Red",
+      "correctColor": "red",
+      "correctLabel": "Blue",
       "colorTrap": true
     }
   ]
@@ -2607,131 +2607,131 @@ export const TIEBREAKER_QUESTIONS: GameQuestion[] = [
   {
     "id": "TB1",
     "category": "Tiebreaker",
-    "prompt": "What year did the first iPhone launch?",
+    "prompt": "What is the national flower of the Philippines?",
     "options": [
       {
         "color": "red",
-        "label": "2005"
+        "label": "Rose"
       },
       {
         "color": "blue",
-        "label": "2006"
+        "label": "Sampaguita"
       },
       {
         "color": "green",
-        "label": "2007"
+        "label": "Orchid"
       },
       {
         "color": "yellow",
-        "label": "2008"
+        "label": "Lotus"
       }
     ],
-    "correctColor": "green",
-    "correctLabel": "2007",
+    "correctColor": "blue",
+    "correctLabel": "Sampaguita",
     "colorTrap": false
   },
   {
     "id": "TB2",
     "category": "Tiebreaker",
-    "prompt": "How many stars are on the U.S. flag?",
+    "prompt": "What year did Walt Disney World open in Florida?",
     "options": [
       {
         "color": "red",
-        "label": "48"
+        "label": "1965"
       },
       {
         "color": "blue",
-        "label": "49"
+        "label": "1971"
       },
       {
         "color": "green",
-        "label": "50"
+        "label": "1975"
       },
       {
         "color": "yellow",
-        "label": "51"
+        "label": "1980"
       }
     ],
-    "correctColor": "green",
-    "correctLabel": "50",
+    "correctColor": "blue",
+    "correctLabel": "1971",
     "colorTrap": false
   },
   {
     "id": "TB3",
     "category": "Tiebreaker",
-    "prompt": "What is the boiling point of water in Fahrenheit at sea level?",
+    "prompt": "How many degrees are in a circle?",
     "options": [
       {
         "color": "red",
-        "label": "200°F"
+        "label": "180"
       },
       {
         "color": "blue",
-        "label": "212°F"
+        "label": "270"
       },
       {
         "color": "green",
-        "label": "220°F"
+        "label": "360"
       },
       {
         "color": "yellow",
-        "label": "180°F"
+        "label": "90"
       }
     ],
-    "correctColor": "blue",
-    "correctLabel": "212°F",
+    "correctColor": "green",
+    "correctLabel": "360",
     "colorTrap": false
   },
   {
     "id": "TB4",
     "category": "Tiebreaker",
-    "prompt": "How many keys does a standard piano have?",
+    "prompt": "What is the speed of light, approximately, in miles per second?",
     "options": [
       {
         "color": "red",
-        "label": "76"
+        "label": "186,000"
       },
       {
         "color": "blue",
-        "label": "88"
+        "label": "86,000"
       },
       {
         "color": "green",
-        "label": "96"
+        "label": "286,000"
       },
       {
         "color": "yellow",
-        "label": "108"
+        "label": "18,600"
       }
     ],
-    "correctColor": "blue",
-    "correctLabel": "88",
+    "correctColor": "red",
+    "correctLabel": "186,000",
     "colorTrap": false
   },
   {
     "id": "TB5",
     "category": "Tiebreaker",
-    "prompt": "What is the smallest prime number?",
+    "prompt": "How many squares are on a standard chessboard?",
     "options": [
       {
         "color": "red",
-        "label": "0"
+        "label": "32"
       },
       {
         "color": "blue",
-        "label": "1"
+        "label": "48"
       },
       {
         "color": "green",
-        "label": "2"
+        "label": "64"
       },
       {
         "color": "yellow",
-        "label": "3"
+        "label": "100"
       }
     ],
     "correctColor": "green",
-    "correctLabel": "2",
+    "correctLabel": "64",
     "colorTrap": false
   }
 ];
